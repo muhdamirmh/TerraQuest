@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ctdm2waconi51"
+path="res://.godot/imported/beach.ogg-d2b565acebe690cfb991319fe2986569.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Audio/Music/biome songs/Biomes/Biomes/Beach/beach.ogg"
+dest_files=["res://.godot/imported/beach.ogg-d2b565acebe690cfb991319fe2986569.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

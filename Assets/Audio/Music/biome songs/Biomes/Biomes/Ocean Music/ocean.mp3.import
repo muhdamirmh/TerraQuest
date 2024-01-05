@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://1mmucq6j04jg"
+path="res://.godot/imported/ocean.mp3-66e0f463d9878f42e2dc6ec27dfc57c1.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Music/biome songs/Biomes/Biomes/Ocean Music/ocean.mp3"
+dest_files=["res://.godot/imported/ocean.mp3-66e0f463d9878f42e2dc6ec27dfc57c1.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

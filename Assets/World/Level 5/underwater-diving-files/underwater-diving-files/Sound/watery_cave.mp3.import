@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://de7g27vpe81fo"
+path="res://.godot/imported/watery_cave.mp3-ce8889c6202ee6f95d707afc2e5ff009.mp3str"
+
+[deps]
+
+source_file="res://Assets/World/Level 5/underwater-diving-files/underwater-diving-files/Sound/watery_cave.mp3"
+dest_files=["res://.godot/imported/watery_cave.mp3-ce8889c6202ee6f95d707afc2e5ff009.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

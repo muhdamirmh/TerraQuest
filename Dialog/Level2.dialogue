@@ -1,0 +1,185 @@
+~ head
+set Global.instructrange = true
+set Global.playeratnpc = true
+=> END
+
+~ tail
+set Global.playeratnpc = false
+set Global.instructrange = false
+=> END
+
+~ correct
+Jawapan anda [color=green]betul[/color]!
+set Global.lvlpoints += 1
+=> END
+
+~ correct2
+Jawapan anda [color=green]betul[/color]!
+=> END
+
+~ wrong
+Jawapan anda [color=red]salah[/color].
+=> END
+
+
+~ lion
+=>< head
+Singa: Apa khabar manusia kecil, nama saya Singa.
+Singa: Selamat datang ke Savana!
+Singa: Savana ialah kawasan padang rumput yg ditumbuhi oleh sedikit pohon-pohon terletak di antara padang pasir dgn hutan khatulistiwa.
+Singa: Walaupun sedikit tumbuh-tumbuhannya di sini, namun ia tetap berinteraksi antara tumbuhan yang lain
+Singa: Jadi, saya sebagai raja alam di sini akan menceritakan tentang interaksi antara tumbuhan.
+Singa: Interaksi antara tumbuhan ada dua jenis iaitu persaingan dan simbiosis
+Singa: Tumbuhan juga memerlukan persaingan seperti haiwan untuk mendapatkan sumber asas yang terhad
+Singa: Semua tumbuhan bersaing tidak kira tumbuhan di dalam pasu bunga di rumah atau tumbuhan liar!
+Singa: Tetapi saya tidak ingat apakah sumber yang ianya bersaing lah...
+Singa: Cuba kamu tegur si Kuda Belang di sana, mungkin dia tahu.
+Singa: Sampai di sini sahaja sang pengembara, moga kita bertemu lagi!
+
+=>< tail
+=> END
+
+~ zebra
+=>< head
+Kuda Belang: Helo, kawanku. Saya si Kuda Belang.
+Kuda Belang: Awak boleh kenalpasti saya dengan melihat corak belang hitam putih pada badan saya. Cantik kan!
+Kuda Belang: Jadi, mengapakah awak bertemu dengan saya?
+- Apakah sumber yang tumbuhan bersaing antara sama satu lain?
+	Kuda Belang: Oh! Ya saya agak bijak tentang itu. Awak bertanya kepada haiwan yang betul!
+Kuda Belang: Asasnya, tumbuhan bersaing tentang empat sumber iaitu ruang, air, cahaya matahari dan nutrien daripada tanah
+Kuda Belang: Inilah yang kita panggil faktor persaingan antara tumbuhan
+Kuda Belang: Empat sumber ini amat penting bagi tumbuh-tumbuhan
+Kuda Belang: Tanpa sumber-sumber ini, tumbuhan tidak dapat membesar dengan baik dan berkemungkinan terbantut
+Kuda Belang: Awak faham ke apa yang saya beritahu ni?
+- Saya rasa saya faham.
+	Kuda Belang: Bagus! Agaknya saya ada kebolehan mengajar ni!
+- Mungkin?
+	Kuda Belang: Tak mengapalah, lain masa kita sembang lagi supaya awak faham
+Kuda Belang: Itu sahajalah saya dapat beritahu, jumpa lagi!
+=>< tail
+=> END
+
+~ elephant
+=>< head
+Gajah: Sedapnya rumput di sini.. saya boleh makan setiap masa!
+Gajah: Ah siapa di sana mengacau saya makan?!
+- Saya orangnya, minta maaf sang gajah
+	Gajah: Tidak baik mengacau haiwan sedang makan tau!
+- Saya cuma nak tegur sahaja..
+	Gajah: Tunggu lah saya habis makan dulu.
+Gajah: Tak mengapa lah, ha awak nak apa dengan saya?
+- Awak tahu tak tentang simbiosis antara tumbuhan?
+	Gajah: Ya saya tahu sebab setiap hari saya makan tumbuhan hahaha!
+Gajah: Simbiosis ialah hubungan sangat rapat antara dua spesies tumbuhan. 
+Gajah: Terdapat dua jenis simbiosis, iaitu komensalisme dan parasitisme.
+Gajah: Saya boleh beritahu kamu tentang komensalisme
+Gajah: Komensalisme ialah interaksi yang memberikan manfaat kepada satu pihak,tetapi tidak merugikan atau memberikan manfaat kepada pihak lain.
+Gajah: Contohnya, pokok orkid menumpang di batang pokok perumah untuk mendapatkan sokongan, cahaya matahari dan nutrien daripadap persekitaran.
+Gajah: Tetapi pokok perumah tidak terjejas daripada sebarang kesan pun.
+Gajah: Saya nak sambung lagi tapi saya tetap lapar jadi saya makan dulu.
+Gajah: Mungkin haiwan lain boleh bercerita tentang parasitisme.
+Gajah: Selamat jalan sang manusia!
+
+=>< tail
+=> END
+
+~ crocodile
+=>< head
+Buaya: Hei awak, saya terdengar perbualan awak dengan si Gajah tadi. 
+Buaya: Awak mahu tahu tentang parasitisme kan?
+- Ya betul
+	Buaya: Jadi jawab soalan ini dengan betul.
+	Buaya: Berapakah sumber yang tumbuhan perlu bersaing?
+	- 2 
+		=>< wrong
+		Buaya: Nampaknya awak nasib malang. Cuba lagi nanti
+		=>< tail
+		=> END
+	- 3 
+		=>< wrong
+		Buaya: Nampaknya awak nasib malang. Cuba lagi nanti
+		=>< tail
+		=> END
+	- 4 
+		=>< correct2
+		Buaya: Baiklah anda layak untuk tahu tentang parasitisme
+- Tidak
+	Buaya: Oh, buang masa saya bercakap dengan awak
+	Buaya: Selamat tinggal
+	=>< tail
+	=> END
+Buaya: Parasitisme ialah interaksi yang memberikan manfaat kepada satu pihak sahaja dan merugikan satu pihak yang lain
+Buaya: Dalam interaksi ini, pihak yang mendapat manfaat dikenali sebagai parasit
+Buaya: Manakala pihak yang mendapat kerugian dikenali sebagai perumah
+Buaya: Contohnya, bunga pakma atau bunga rafflesia perlu menumpang pada pokok perumah untuk nutrien 
+Buaya: Ini kerana ianya tidak dapat menjalankan proses fotosintesis dengan sendiri
+Buaya: Jadi, pokok perumah mendapat rugi disebabkan bunga pakma ini
+Buaya: Tahukah awak, bunga pakma merupakan bunga rasmi negeri Sabah! Menarik kan!
+Buaya: Jadi, itu sahajalah tentang parasitisme
+Buaya: Harap ini dapat membantu awak dalam meneruskan pengembaraan.
+Buaya: Selamat jalan!
+
+=>< tail
+=> END
+
+~ questions
+=>< head
+set Global.lvlpoints = 0
+
+Tiba masanya untuk anda menjawab Kuiz Bintang Peringkat Savana!
+
+Soalan 1: Ada berapakah interaksi antara tumbuhan?
+- [[3|5]] =>< wrong
+- 2  =>< correct 
+- [[4|1]] =>< wrong
+
+Soalan 2: Mengapakah tumbuhan bersaing sesama sendiri?
+- Mendapat sumber asas yang terhad  =>< correct 
+- Mencemburui tumbuhan lain =>< wrong
+- Kerana ia tidak boleh bersaing dengan haiwan sebaliknya =>< wrong
+
+Soalan 3: Berikut adalah sumber yang menyebabkan tumbuhan bersaing kecuali ?
+- [[Ruang|Air]] =>< wrong
+- [[Cahaya Matahari|Nutrien]] =>< wrong
+- [[Pasangan|Buruan]]  =>< correct 
+
+Soalan 4: Apakah yang terjadi jika tumbuhan tidak dapat sumber yang mencukupi?
+- Tumbuhan [[tidak dapat membesar dengan baik|berkemungkinan terbantut]]  =>< correct 
+- Tumbuhan akan sedih =>< wrong
+- Tumbuhan tidak akan apa-apa =>< wrong
+
+Soalan 5: Apakah maksud istilah "simbiosis" dalam interaksi antara tumbuhan?
+- Hubungan rapat antara dua spesies haiwan  =>< wrong
+- Persaingan rapat antara dua spesies tumbuhan  =>< wrong 
+- Hubungan rapat antara dua spesies tumbuhan.  =>< correct
+
+Soalan 6: Berapakah jenis simbiosis?
+- [[3|5]] =>< wrong
+- 2  =>< correct 
+- [[4|1]] =>< wrong
+
+Soalan 7: Berikut ialah jenis simbiosis kecuali?
+- Mutualisme =>< correct
+- Komensalisme  =>< wrong 
+- Parasitisme  =>< wrong
+
+Soalan 8: Apakah maksud istilah "komensalisme" dalam interaksi antara tumbuhan?
+- Interaksi yang memanfaatkan dua pihak  =>< wrong
+- Interaksi yang memanfaatkan satu pihak, tidak merugikan pihak lain.  =>< wrong 
+- Interaksi yang memanfaatkan satu pihak, tidak menjejaskan pihak lain.  =>< correct
+
+Soalan 9: Apakah maksud istilah "parasitisme" dalam interaksi antara tumbuhan?
+- Interaksi yang memanfaatkan dua pihak  =>< wrong
+- Interaksi yang memanfaatkan satu pihak, tidak merugikan pihak lain.  =>< correct 
+- Interaksi yang memanfaatkan satu pihak, tidak menjejaskan pihak lain.  =>< wrong
+
+Soalan Bonus: Bolehkah tumbuhan berinteraksi untuk memanfaatkan kedua-dua pihak?
+Soalan Bonus: Anda cubalah fikirkan sendiri!
+set Global.lvlpoints += 1
+
+Anda mendapat {{Global.lvlpoints}} daripada 10 soalan betul!
+Peringkat 2 telah selesai!
+
+set Global.checklvl = 2
+=>< tail
+=> END

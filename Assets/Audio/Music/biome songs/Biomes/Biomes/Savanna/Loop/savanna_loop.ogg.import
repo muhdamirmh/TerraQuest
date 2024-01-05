@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cs7ygfgqc2w7h"
+path="res://.godot/imported/savanna_loop.ogg-37e404b081125c5dd379e90c0c152495.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Audio/Music/biome songs/Biomes/Biomes/Savanna/Loop/savanna_loop.ogg"
+dest_files=["res://.godot/imported/savanna_loop.ogg-37e404b081125c5dd379e90c0c152495.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

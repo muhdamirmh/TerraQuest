@@ -1,0 +1,53 @@
+[gd_scene load_steps=8 format=3 uid="uid://drj7nj3x2nfpx"]
+
+[ext_resource type="Texture2D" uid="uid://cis2l3yu1uxu4" path="res://Assets/Misc/Coin_Gems/spr_coin_ama.png" id="1_evy7e"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k8v0w"]
+atlas = ExtResource("1_evy7e")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bo4p5"]
+atlas = ExtResource("1_evy7e")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ti6eo"]
+atlas = ExtResource("1_evy7e")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8dcqg"]
+atlas = ExtResource("1_evy7e")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8pdon"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k8v0w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bo4p5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ti6eo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8dcqg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pi4v8"]
+size = Vector2(10, 15)
+
+[node name="powerWall" type="Area2D" groups=["powerWall"]]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_8pdon")
+autoplay = "default"
+frame_progress = 0.458402
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_pi4v8")

@@ -1,0 +1,46 @@
+[gd_scene load_steps=8 format=3 uid="uid://dxlwr6elc2lpy"]
+
+[ext_resource type="Texture2D" uid="uid://dixa2r020vlrk" path="res://Assets/Characters/Enemy/bow/bow/bow pull/Sprite-0001.png" id="1_q16j2"]
+[ext_resource type="Script" path="res://Scenes/enemy_bow.gd" id="1_r2qxq"]
+[ext_resource type="Texture2D" uid="uid://4vxdqctg5kgi" path="res://Assets/Characters/Enemy/bow/bow/bow pull/Sprite-0002.png" id="2_m5hab"]
+[ext_resource type="Texture2D" uid="uid://b8adqnlvxmkn1" path="res://Assets/Characters/Enemy/bow/bow/bow pull/Sprite-0003.png" id="3_k4qem"]
+[ext_resource type="Texture2D" uid="uid://cv6lg5ydsgf2b" path="res://Assets/Characters/Enemy/bow/bow/bow pull/bow relese3.png" id="5_41bas"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mutos"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_30mgf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_q16j2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_m5hab")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_k4qem")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_41bas")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[node name="EnemyBow" type="CharacterBody2D"]
+scale = Vector2(0.7, 0.7)
+script = ExtResource("1_r2qxq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_mutos")
+disabled = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_30mgf")
+autoplay = "default"
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(29, 0)
+
+[node name="Timer" type="Timer" parent="."]

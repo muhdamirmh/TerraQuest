@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cca3ri1kgt03b"
+path="res://.godot/imported/ocean.wav-9ec3129fc2d759361d1b8bab229adc51.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/Music/biome songs/Biomes/Biomes/Ocean Music/ocean.wav"
+dest_files=["res://.godot/imported/ocean.wav-9ec3129fc2d759361d1b8bab229adc51.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=2
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

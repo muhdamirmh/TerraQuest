@@ -1,0 +1,68 @@
+~ head
+set Global.instructrange = true
+set Global.playeratnpc = true
+=> END
+
+~ tail
+set Global.playeratnpc = false
+set Global.instructrange = false
+=> END
+
+~ correct
+Jawapan anda [color=green]betul[/color]!
+set Global.lvlpoints += 1
+=> END
+
+~ wrong
+Jawapan anda [color=red]salah[/color].
+=> END
+
+~ instruct
+=>< head
+
+=>< tail
+
+=> END
+
+~ crab
+=>< head
+Crab: Oh!
+
+=>< tail
+=> END
+
+~ jellyfish
+=>< head
+Jellyfish: Oh!
+
+=>< tail
+=> END
+
+~ stingray
+=>< head
+Stingray: Oh!
+
+=>< tail
+=> END
+
+~ shark
+=>< head
+Shark: Oh!
+
+=>< tail
+=> END
+
+~ questions
+=>< head
+set Global.lvlpoints = 0
+
+Tiba masanya untuk anda menjawab Kuiz Bintang Peringkat Laut!
+
+
+
+Anda mendapat {{Global.lvlpoints}} daripada 10 soalan betul!
+Peringkat 5 telah selesai!
+
+set Global.checklvl = 5
+=>< tail
+=> END

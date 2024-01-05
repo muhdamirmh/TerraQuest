@@ -1,0 +1,68 @@
+~ head
+set Global.instructrange = true
+set Global.playeratnpc = true
+=> END
+
+~ tail
+set Global.playeratnpc = false
+set Global.instructrange = false
+=> END
+
+~ correct
+Jawapan anda [color=green]betul[/color]!
+set Global.lvlpoints += 1
+=> END
+
+~ wrong
+Jawapan anda [color=red]salah[/color].
+=> END
+
+~ instruct
+=>< head
+
+=>< tail
+
+=> END
+
+~ sabretooth
+=>< head
+Arctic Fox: Oh!
+
+=>< tail
+=> END
+
+~ penguin
+=>< head
+Penguin: Oh!
+
+=>< tail
+=> END
+
+~ walrus
+=>< head
+Walrus: Oh!
+
+=>< tail
+=> END
+
+~ mammoth
+=>< head
+Mammoth: Oh!
+
+=>< tail
+=> END
+
+~ questions
+=>< head
+set Global.lvlpoints = 0
+
+Tiba masanya untuk anda menjawab Kuiz Bintang Peringkat Salji!
+
+
+
+Anda mendapat {{Global.lvlpoints}} daripada 10 soalan betul!
+Peringkat 6 telah selesai!
+
+set Global.checklvl = 6
+=>< tail
+=> END

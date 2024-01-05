@@ -1,0 +1,70 @@
+[gd_scene load_steps=11 format=3 uid="uid://dl1y273qb7von"]
+
+[ext_resource type="Script" path="res://Scenes/bullet.gd" id="1_3doi7"]
+[ext_resource type="Texture2D" uid="uid://cefecalf6w8w6" path="res://Assets/Characters/Enemy/Effect and Bullet 16x16/Fire Effect and Bullet 16x16.png" id="1_g71t3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o0rp7"]
+atlas = ExtResource("1_g71t3")
+region = Rect2(480, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5aucv"]
+atlas = ExtResource("1_g71t3")
+region = Rect2(496, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7h68d"]
+atlas = ExtResource("1_g71t3")
+region = Rect2(512, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f32pq"]
+atlas = ExtResource("1_g71t3")
+region = Rect2(528, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iphu0"]
+atlas = ExtResource("1_g71t3")
+region = Rect2(544, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jidhb"]
+atlas = ExtResource("1_g71t3")
+region = Rect2(560, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xoufe"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o0rp7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5aucv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7h68d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f32pq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iphu0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jidhb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_os65u"]
+size = Vector2(16, 16)
+
+[node name="Bullet" type="Area2D" groups=["Obstacles"]]
+script = ExtResource("1_3doi7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_xoufe")
+autoplay = "default"
+frame_progress = 0.377946
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_os65u")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,296 @@
+[gd_scene load_steps=4 format=3 uid="uid://d1d4sda2toruk"]
+
+[ext_resource type="Theme" uid="uid://ir4rfq0nqkt0" path="res://Assets/UI/UITheme.tres" id="1_v421x"]
+[ext_resource type="Script" path="res://Scenes/achievement.gd" id="2_es5ej"]
+[ext_resource type="Texture2D" uid="uid://v4uwrxom646t" path="res://Assets/UI/no.png" id="2_x7vuu"]
+
+[node name="Achievement" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_v421x")
+script = ExtResource("2_es5ej")
+
+[node name="MainPanel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -396.0
+offset_top = -226.0
+offset_right = 383.0
+offset_bottom = 246.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MainPanel"]
+layout_mode = 0
+offset_left = 36.0
+offset_top = 16.0
+offset_right = 762.0
+offset_bottom = 453.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainPanel/ScrollContainer"]
+custom_minimum_size = Vector2(0, 400)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MainPanel/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Level1" type="Panel" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(350, 100)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer/Level1"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 37.0
+offset_right = 274.0
+offset_bottom = 59.0
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "Selesai Peringkat 1"
+
+[node name="TextureRect" type="TextureRect" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer/Level1"]
+layout_mode = 0
+offset_left = 281.0
+offset_top = 30.0
+offset_right = 321.0
+offset_bottom = 70.0
+texture = ExtResource("2_x7vuu")
+
+[node name="Level2" type="Panel" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(350, 100)
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer/Level2"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 37.0
+offset_right = 274.0
+offset_bottom = 59.0
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "Selesai Peringkat 2"
+
+[node name="TextureRect" type="TextureRect" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer/Level2"]
+layout_mode = 0
+offset_left = 281.0
+offset_top = 30.0
+offset_right = 321.0
+offset_bottom = 70.0
+texture = ExtResource("2_x7vuu")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MainPanel/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(350, 100)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer2/Panel"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 37.0
+offset_right = 274.0
+offset_bottom = 59.0
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "Selesai Peringkat 3"
+
+[node name="TextureRect" type="TextureRect" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer2/Panel"]
+layout_mode = 0
+offset_left = 281.0
+offset_top = 30.0
+offset_right = 321.0
+offset_bottom = 70.0
+texture = ExtResource("2_x7vuu")
+
+[node name="Panel2" type="Panel" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(350, 100)
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer2/Panel2"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 37.0
+offset_right = 274.0
+offset_bottom = 59.0
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "Selesai Peringkat 4"
+
+[node name="TextureRect" type="TextureRect" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer2/Panel2"]
+layout_mode = 0
+offset_left = 281.0
+offset_top = 30.0
+offset_right = 321.0
+offset_bottom = 70.0
+texture = ExtResource("2_x7vuu")
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="MainPanel/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer3"]
+custom_minimum_size = Vector2(350, 100)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer3/Panel"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 37.0
+offset_right = 274.0
+offset_bottom = 59.0
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "Selesai Peringkat 5"
+
+[node name="TextureRect" type="TextureRect" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer3/Panel"]
+layout_mode = 0
+offset_left = 281.0
+offset_top = 30.0
+offset_right = 321.0
+offset_bottom = 70.0
+texture = ExtResource("2_x7vuu")
+
+[node name="Panel2" type="Panel" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer3"]
+custom_minimum_size = Vector2(350, 100)
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer3/Panel2"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 37.0
+offset_right = 274.0
+offset_bottom = 59.0
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "Selesai Peringkat 6"
+
+[node name="TextureRect" type="TextureRect" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer3/Panel2"]
+layout_mode = 0
+offset_left = 281.0
+offset_top = 30.0
+offset_right = 321.0
+offset_bottom = 70.0
+texture = ExtResource("2_x7vuu")
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="MainPanel/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer4"]
+custom_minimum_size = Vector2(350, 100)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer4/Panel"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 37.0
+offset_right = 274.0
+offset_bottom = 59.0
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "placeholder"
+
+[node name="TextureRect" type="TextureRect" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer4/Panel"]
+layout_mode = 0
+offset_left = 281.0
+offset_top = 30.0
+offset_right = 321.0
+offset_bottom = 70.0
+texture = ExtResource("2_x7vuu")
+
+[node name="Panel2" type="Panel" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer4"]
+custom_minimum_size = Vector2(350, 100)
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer4/Panel2"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 37.0
+offset_right = 274.0
+offset_bottom = 59.0
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "placeholder"
+
+[node name="TextureRect" type="TextureRect" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer4/Panel2"]
+layout_mode = 0
+offset_left = 281.0
+offset_top = 30.0
+offset_right = 321.0
+offset_bottom = 70.0
+texture = ExtResource("2_x7vuu")
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="MainPanel/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer5"]
+custom_minimum_size = Vector2(350, 100)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer5/Panel"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 37.0
+offset_right = 274.0
+offset_bottom = 59.0
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "placeholder"
+
+[node name="TextureRect" type="TextureRect" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer5/Panel"]
+layout_mode = 0
+offset_left = 281.0
+offset_top = 30.0
+offset_right = 321.0
+offset_bottom = 70.0
+texture = ExtResource("2_x7vuu")
+
+[node name="Panel2" type="Panel" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer5"]
+custom_minimum_size = Vector2(350, 100)
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer5/Panel2"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 37.0
+offset_right = 274.0
+offset_bottom = 59.0
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "placeholder"
+
+[node name="TextureRect" type="TextureRect" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer5/Panel2"]
+layout_mode = 0
+offset_left = 281.0
+offset_top = 30.0
+offset_right = 321.0
+offset_bottom = 70.0
+texture = ExtResource("2_x7vuu")
+
+[node name="Back" type="Button" parent="."]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 10.0
+offset_right = 140.0
+offset_bottom = 66.0
+theme_override_font_sizes/font_size = 30
+text = "Kembali"
+
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]

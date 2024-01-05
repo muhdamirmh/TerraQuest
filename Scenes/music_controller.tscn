@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dhcyvmv46lrqb"]
+
+[ext_resource type="Script" path="res://Scenes/music_controller.gd" id="1_dclge"]
+[ext_resource type="AudioStream" uid="uid://cystwb7uswrak" path="res://Assets/Audio/Music/biome songs/Biomes/Biomes/Snowlands/snowlands.wav" id="2_vghob"]
+[ext_resource type="AudioStream" uid="uid://dylk2omp12aqp" path="res://Assets/Audio/SFX/COLORALPHA 50 Menu Interface SFX/COLORALPHA 50 Menu Interface SFX/WAV/MI_SFX 31.wav" id="3_eqcu6"]
+
+[node name="MusicController" type="Node2D"]
+script = ExtResource("1_dclge")
+
+[node name="MainMenu" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_vghob")
+bus = &"Music"
+
+[node name="SFXButton" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_eqcu6")
+bus = &"SFX"
+
+[node name="Level" type="AudioStreamPlayer" parent="."]
+volume_db = -2.761
+bus = &"Music"

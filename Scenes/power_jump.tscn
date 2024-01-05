@@ -1,0 +1,54 @@
+[gd_scene load_steps=8 format=3 uid="uid://dutpf1a7fmw8h"]
+
+[ext_resource type="Texture2D" uid="uid://b3ikpxfvphd3d" path="res://Assets/Misc/Coin_Gems/spr_coin_roj.png" id="2_yk2dj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vxgc0"]
+atlas = ExtResource("2_yk2dj")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n3iyq"]
+atlas = ExtResource("2_yk2dj")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k3vsa"]
+atlas = ExtResource("2_yk2dj")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_me0jn"]
+atlas = ExtResource("2_yk2dj")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j4rbp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vxgc0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n3iyq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k3vsa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_me0jn")
+}],
+"loop": true,
+"name": &"jump_power",
+"speed": 8.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fhlnj"]
+size = Vector2(10, 15)
+
+[node name="powerJump" type="Area2D" groups=["powerJump"]]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_j4rbp")
+animation = &"jump_power"
+autoplay = "jump_power"
+frame_progress = 0.367355
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_fhlnj")

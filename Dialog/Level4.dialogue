@@ -1,0 +1,70 @@
+~ head
+set Global.instructrange = true
+set Global.playeratnpc = true
+=> END
+
+~ tail
+set Global.playeratnpc = false
+set Global.instructrange = false
+=> END
+
+~ correct
+Jawapan anda [color=green]betul[/color]!
+set Global.lvlpoints += 1
+=> END
+
+~ wrong
+Jawapan anda [color=red]salah[/color].
+=> END
+
+~ frog
+=>< head
+Katak: Helo dan selamat datang ke Paya, wahai rakanku! Saya Katak! Saya tinggal disini.
+Katak: Paya ialah kawasan tanah berlumpur yang ditumbuhi pelbagai jenis tumbuhan!
+Katak: Pokok bakau dan nipah adalah antara tumbuhan yang boleh dijumpai disini.
+Katak: Apapun, sekarang ini saya mahu cerita tentang haiwan yang telah pupus
+Katak: Pupus bermaksud suatu itu telah lenyap sama sekali dari muka bumi.
+Katak: Contoh haiwan yang telah pupus ialah dinosaur, mamot, quagga, burung Dodo dan banyak lagi.
+Katak: Antara sebab kenapa haiwan ini boleh pupus ialah kejadian alam semula jadi seperti gunung berapi, impak meteor dan lain lagi
+Katak: Pemburuan melampau oleh manusia juga boleh menjadi sebab kepupusan suatu spesies haiwan
+Katak: Jadi jangan lah manusia sengaja memburu haiwan secara berleluasa.
+Katak: Saya perlu bergerak sekarang untuk mencari makanan, selamat jalan rakan!
+
+=>< tail
+=> END
+
+~ goose
+=>< head
+Angsa: Oh!
+
+=>< tail
+=> END
+
+~ otter
+=>< head
+Turtle: Oh!
+
+=>< tail
+=> END
+
+~ dragonfly
+=>< head
+Dragonfly: Oh!
+
+=>< tail
+=> END
+
+~ questions
+=>< head
+set Global.lvlpoints = 0
+
+Tiba masanya untuk anda menjawab Kuiz Bintang Peringkat Paya!
+
+
+
+Anda mendapat {{Global.lvlpoints}} daripada 10 soalan betul!
+Peringkat 4 telah selesai!
+
+set Global.checklvl = 4
+=>< tail
+=> END

@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://cb1vbsst471x5"]
+
+[sub_resource type="TileSet" id="TileSet_n282c"]
+physics_layer_0/collision_layer = 1
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wa5q8"]
+size = Vector2(50, 34)
+
+[node name="Door" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_n282c")
+format = 2
+layer_0/tile_data = PackedInt32Array(65535, 720896, 17, 0, 851968, 17, -131072, 851968, 15, -65537, 720896, 15, -65536, 851968, 16, -1, 720896, 16)
+
+[node name="Area2D" type="Area2D" parent="TileMap" groups=["Doors"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/Area2D"]
+position = Vector2(-4.54981e-07, -8)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_wa5q8")

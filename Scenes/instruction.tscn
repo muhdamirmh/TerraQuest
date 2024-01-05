@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://cqetgkb8xe5mg"]
+
+[ext_resource type="PackedScene" uid="uid://cvbwpci6kmy11" path="res://Scenes/actionable.tscn" id="1_4udha"]
+[ext_resource type="Texture2D" uid="uid://c802a6464vf05" path="res://Assets/Misc/signpost32px.png" id="1_yax0y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_klhnq"]
+size = Vector2(30, 25)
+
+[node name="Instruction" type="Area2D" groups=["Instructions"]]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_yax0y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_klhnq")
+
+[node name="Actionable" parent="." instance=ExtResource("1_4udha")]

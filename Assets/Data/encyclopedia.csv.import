@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://rlguiuddyj70"
+
+[deps]
+
+files=["res://Assets/Data/encyclopedia.Text.translation"]
+
+source_file="res://Assets/Data/encyclopedia.csv"
+dest_files=["res://Assets/Data/encyclopedia.Text.translation"]
+
+[params]
+
+compress=true
+delimiter=0

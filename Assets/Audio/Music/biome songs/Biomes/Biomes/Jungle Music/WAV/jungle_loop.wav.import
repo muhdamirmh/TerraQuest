@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ds4ypb7t7wfk6"
+path="res://.godot/imported/jungle_loop.wav-d64c08d02b417111ce44dbdf00c95a36.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/Music/biome songs/Biomes/Biomes/Jungle Music/WAV/jungle_loop.wav"
+dest_files=["res://.godot/imported/jungle_loop.wav-d64c08d02b417111ce44dbdf00c95a36.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=2
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

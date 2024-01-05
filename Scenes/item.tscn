@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bsg1vlgd7y3ds"]
+
+[ext_resource type="Texture2D" uid="uid://hh37k26kr8gr" path="res://Assets/Misc/FRUIT_NL.png" id="2_bs0hs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2qq2p"]
+size = Vector2(22, 23)
+
+[node name="Item" type="Area2D" groups=["Items"]]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("2_bs0hs")
+hframes = 5
+vframes = 8
+frame = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_2qq2p")

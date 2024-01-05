@@ -1,0 +1,99 @@
+[gd_scene load_steps=4 format=3 uid="uid://o4srmgnex3r2"]
+
+[ext_resource type="Script" path="res://Scenes/main_menu.gd" id="1_h6f7x"]
+[ext_resource type="FontFile" uid="uid://ds3bt3gv3iw2g" path="res://Assets/UI/Fibberish v1.0/Fibberish v1.0/fibberish.ttf" id="2_a7ojk"]
+[ext_resource type="Theme" uid="uid://ir4rfq0nqkt0" path="res://Assets/UI/UITheme.tres" id="3_xshdv"]
+
+[node name="MainMenu" type="Node2D"]
+position = Vector2(0, -1)
+script = ExtResource("1_h6f7x")
+
+[node name="TitleLabel" type="Label" parent="."]
+offset_left = 5.0
+offset_top = 90.0
+offset_right = 1142.0
+offset_bottom = 146.0
+theme_type_variation = &"HeaderLarge"
+theme_override_colors/font_color = Color(0.407843, 0.619608, 0.192157, 1)
+theme_override_fonts/font = ExtResource("2_a7ojk")
+theme_override_font_sizes/font_size = 60
+text = "TerraQuest"
+horizontal_alignment = 1
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 486.0
+offset_top = 180.0
+offset_right = 666.0
+offset_bottom = 571.0
+theme = ExtResource("3_xshdv")
+
+[node name="StartButton" type="Button" parent="."]
+offset_left = 518.0
+offset_top = 195.0
+offset_right = 627.0
+offset_bottom = 239.0
+theme = ExtResource("3_xshdv")
+theme_override_fonts/font = ExtResource("2_a7ojk")
+theme_override_font_sizes/font_size = 25
+text = "Mula"
+
+[node name="EncyclopediaButton" type="Button" parent="."]
+offset_left = 500.0
+offset_top = 259.0
+offset_right = 651.0
+offset_bottom = 304.0
+theme = ExtResource("3_xshdv")
+theme_override_fonts/font = ExtResource("2_a7ojk")
+theme_override_font_sizes/font_size = 25
+text = "Ensiklopedia"
+
+[node name="AchievementButton" type="Button" parent="."]
+offset_left = 500.0
+offset_top = 324.0
+offset_right = 651.0
+offset_bottom = 363.0
+theme = ExtResource("3_xshdv")
+theme_override_fonts/font = ExtResource("2_a7ojk")
+theme_override_font_sizes/font_size = 25
+text = "Pencapaian
+"
+
+[node name="SettingsButton" type="Button" parent="."]
+offset_left = 518.0
+offset_top = 386.0
+offset_right = 627.0
+offset_bottom = 424.0
+theme = ExtResource("3_xshdv")
+theme_override_fonts/font = ExtResource("2_a7ojk")
+theme_override_font_sizes/font_size = 25
+text = "Tetapan"
+
+[node name="AboutButton" type="Button" parent="."]
+offset_left = 518.0
+offset_top = 452.0
+offset_right = 626.0
+offset_bottom = 489.0
+theme = ExtResource("3_xshdv")
+theme_override_fonts/font = ExtResource("2_a7ojk")
+theme_override_font_sizes/font_size = 25
+text = "Tentang"
+
+[node name="QuitButton" type="Button" parent="."]
+offset_left = 515.0
+offset_top = 513.0
+offset_right = 632.0
+offset_bottom = 555.0
+theme = ExtResource("3_xshdv")
+theme_override_fonts/font = ExtResource("2_a7ojk")
+theme_override_font_sizes/font_size = 25
+text = "Keluar
+"
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="EncyclopediaButton" to="." method="_on_encyclopedia_button_pressed"]
+[connection signal="pressed" from="AchievementButton" to="." method="_on_achievement_button_pressed"]
+[connection signal="pressed" from="SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="AboutButton" to="." method="_on_about_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]

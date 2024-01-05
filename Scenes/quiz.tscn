@@ -1,0 +1,70 @@
+[gd_scene load_steps=12 format=3 uid="uid://bfr63y4o401l4"]
+
+[ext_resource type="PackedScene" uid="uid://cvbwpci6kmy11" path="res://Scenes/actionable.tscn" id="1_drm4a"]
+[ext_resource type="Script" path="res://Scenes/quiz.gd" id="1_v1y1n"]
+[ext_resource type="Texture2D" uid="uid://cqs5a5y77teld" path="res://Assets/Misc/coins-chests-etc-2-0.png" id="2_c0j26"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2s06r"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y5e0u"]
+atlas = ExtResource("2_c0j26")
+region = Rect2(192, 209, 16, 19)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xuk54"]
+atlas = ExtResource("2_c0j26")
+region = Rect2(208, 209, 16, 19)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_anoy2"]
+atlas = ExtResource("2_c0j26")
+region = Rect2(224, 209, 16, 19)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wperj"]
+atlas = ExtResource("2_c0j26")
+region = Rect2(240, 209, 16, 19)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uwam8"]
+atlas = ExtResource("2_c0j26")
+region = Rect2(256, 209, 16, 19)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ht0bb"]
+atlas = ExtResource("2_c0j26")
+region = Rect2(272, 209, 16, 19)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ldsyw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y5e0u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xuk54")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_anoy2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wperj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uwam8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ht0bb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[node name="Quiz" type="Area2D" groups=["Quiz"]]
+script = ExtResource("1_v1y1n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_2s06r")
+
+[node name="Actionable" parent="." instance=ExtResource("1_drm4a")]
+dialogue_start = "questions"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ldsyw")
+autoplay = "default"

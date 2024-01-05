@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cvbwpci6kmy11"]
+
+[ext_resource type="Script" path="res://Scenes/actionable.gd" id="1_gycab"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w5pui"]
+size = Vector2(30, 25)
+
+[node name="Actionable" type="Area2D"]
+collision_layer = 16
+collision_mask = 0
+script = ExtResource("1_gycab")
+
+[node name="ActionCollision" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_w5pui")

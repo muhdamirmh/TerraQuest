@@ -1,0 +1,24 @@
+1_1,Mangsa-pemangsa ialah...
+1_2,Persaingan ialah...
+1_3,Simbiosis ialah...
+1_4,Placeholder ialah...
+2_1,Example1
+2_2,Example2
+2_3,Example3
+2_4,Example4
+3_1,Example1
+3_2,Example2
+3_3,Example3
+3_4,Example4
+4_1,Example1
+4_2,Example2
+4_3,Example3
+4_4,Example4
+5_1,Example1
+5_2,Example2
+5_3,Example3
+5_4,Example4
+6_1,Example1
+6_2,Example2
+6_3,Example3
+6_4,Example4
