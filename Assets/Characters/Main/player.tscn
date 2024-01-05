@@ -1,17 +1,16 @@
-[gd_scene load_steps=53 format=3 uid="uid://brlu7j6yij5nu"]
+[gd_scene load_steps=52 format=3 uid="uid://brlu7j6yij5nu"]
 
 [ext_resource type="Texture2D" uid="uid://cxqrkgku73dyh" path="res://Assets/Characters/Main/Adventurer Sprite Sheet v1.5.png" id="1_nceqb"]
 [ext_resource type="Script" path="res://Assets/Characters/Main/player.gd" id="1_xljp6"]
+[ext_resource type="Script" path="res://Scripts/UIManager.gd" id="3_osnbh"]
 [ext_resource type="Script" path="res://Assets/Characters/Main/Camera2D.gd" id="3_w7s3c"]
 [ext_resource type="Texture2D" uid="uid://m4pi0aeibah4" path="res://Assets/Misc/Coin_Gems/MonedaD.png" id="4_hla8d"]
-[ext_resource type="Script" path="res://UI/UIManager.gd" id="4_j3eud"]
 [ext_resource type="Script" path="res://Assets/Characters/Main/PlayerStateMachine.gd" id="4_pwnwo"]
 [ext_resource type="Script" path="res://Assets/Characters/groundstate.gd" id="5_0crjm"]
 [ext_resource type="Script" path="res://Assets/Characters/Main/StateDebugLabel.gd" id="5_o4ofh"]
 [ext_resource type="Texture2D" uid="uid://nrtoajf4o38i" path="res://Assets/Misc/Pixel Heart Animation GIFs & Spritesheets, 32x32 and 16x16/Pixel Heart Sprite Sheet 16x16.png" id="5_p6um4"]
 [ext_resource type="Script" path="res://Assets/Characters/airstate.gd" id="6_3tlcb"]
 [ext_resource type="PackedScene" uid="uid://dphiwe078obwg" path="res://UI/joystick.tscn" id="6_lxxbg"]
-[ext_resource type="Script" path="res://Assets/Characters/landingstate.gd" id="7_kls2u"]
 [ext_resource type="AudioStream" uid="uid://cdjucltiqiu40" path="res://Assets/Audio/SFX/SweetSounds_SFX/WAV/Jump.wav" id="12_jwerg"]
 [ext_resource type="AudioStream" uid="uid://mik5yuc1dev6" path="res://Assets/Audio/SFX/SweetSounds_SFX/WAV/Hurt.wav" id="13_vungr"]
 [ext_resource type="AudioStream" uid="uid://dj303mfn3trif" path="res://Assets/Audio/SFX/RPG_Essentials_Free/12_Player_Movement_SFX/03_Step_grass_03.wav" id="14_18spc"]
@@ -584,7 +583,7 @@ anim_player = NodePath("../AnimationPlayer")
 parameters/move/blend_position = -0.000841022
 
 [node name="UIManager" type="CanvasLayer" parent="."]
-script = ExtResource("4_j3eud")
+script = ExtResource("3_osnbh")
 
 [node name="CoinIcon" type="TextureRect" parent="UIManager"]
 anchors_preset = -1
@@ -679,16 +678,6 @@ script = ExtResource("6_3tlcb")
 ground_state = NodePath("../Ground")
 player = NodePath("../..")
 
-[node name="Landing" type="Node" parent="PlayerStateMachine" node_paths=PackedStringArray("ground_state")]
-script = ExtResource("7_kls2u")
-ground_state = NodePath("../Ground")
-can_move = false
-
-[node name="Timer" type="Timer" parent="PlayerStateMachine/Landing"]
-wait_time = 0.05
-one_shot = true
-autostart = true
-
 [node name="StateDebugLabel" type="Label" parent="." node_paths=PackedStringArray("state_machine")]
 visible = false
 offset_left = -43.0
@@ -732,6 +721,5 @@ bus = &"SFX"
 [connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]
 [connection signal="area_exited" from="Hitbox" to="." method="_on_hitbox_area_exited"]
 [connection signal="animation_finished" from="AnimationTree" to="PlayerStateMachine/Air" method="_on_animation_tree_animation_finished"]
-[connection signal="animation_finished" from="AnimationTree" to="PlayerStateMachine/Landing" method="_on_animation_tree_animation_finished"]
 [connection signal="jump_now" from="UIManager/Joystick" to="PlayerStateMachine/Ground" method="_on_joystick_jump_now"]
 [connection signal="jump_now" from="UIManager/Joystick" to="PlayerStateMachine/Air" method="_on_joystick_jump_now"]
