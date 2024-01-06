@@ -11,3 +11,5 @@ func _ready():
 func _on_pause_button_pressed():
 	$CanvasLayer/PauseButton.hide()
 	pauseMenu()
+
+

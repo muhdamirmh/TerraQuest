@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=3 uid="uid://brlu7j6yij5nu"]
+[gd_scene load_steps=51 format=3 uid="uid://brlu7j6yij5nu"]
 
 [ext_resource type="Texture2D" uid="uid://cxqrkgku73dyh" path="res://Assets/Characters/Main/Adventurer Sprite Sheet v1.5.png" id="1_nceqb"]
 [ext_resource type="Script" path="res://Assets/Characters/Main/player.gd" id="1_xljp6"]
@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://m4pi0aeibah4" path="res://Assets/Misc/Coin_Gems/MonedaD.png" id="4_hla8d"]
 [ext_resource type="Script" path="res://Assets/Characters/Main/PlayerStateMachine.gd" id="4_pwnwo"]
 [ext_resource type="Script" path="res://Assets/Characters/groundstate.gd" id="5_0crjm"]
-[ext_resource type="Script" path="res://Assets/Characters/Main/StateDebugLabel.gd" id="5_o4ofh"]
 [ext_resource type="Texture2D" uid="uid://nrtoajf4o38i" path="res://Assets/Misc/Pixel Heart Animation GIFs & Spritesheets, 32x32 and 16x16/Pixel Heart Sprite Sheet 16x16.png" id="5_p6um4"]
 [ext_resource type="Script" path="res://Assets/Characters/airstate.gd" id="6_3tlcb"]
 [ext_resource type="PackedScene" uid="uid://dphiwe078obwg" path="res://UI/joystick.tscn" id="6_lxxbg"]
@@ -678,16 +677,6 @@ script = ExtResource("6_3tlcb")
 ground_state = NodePath("../Ground")
 player = NodePath("../..")
 
-[node name="StateDebugLabel" type="Label" parent="." node_paths=PackedStringArray("state_machine")]
-visible = false
-offset_left = -43.0
-offset_top = -39.0
-offset_right = 6.0
-offset_bottom = -13.0
-text = "State: "
-script = ExtResource("5_o4ofh")
-state_machine = NodePath("../PlayerStateMachine")
-
 [node name="Timer" type="Timer" parent="."]
 wait_time = 2.0
 one_shot = true
@@ -716,8 +705,6 @@ stream = ExtResource("14_18spc")
 bus = &"SFX"
 
 [connection signal="coinamount" from="." to="UIManager" method="_on_player_coinamount"]
-[connection signal="child_entered_tree" from="CollisionShape2D" to="." method="_on_collision_shape_2d_child_entered_tree"]
-[connection signal="tree_entered" from="CollisionShape2D" to="." method="_on_collision_shape_2d_tree_entered"]
 [connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]
 [connection signal="area_exited" from="Hitbox" to="." method="_on_hitbox_area_exited"]
 [connection signal="animation_finished" from="AnimationTree" to="PlayerStateMachine/Air" method="_on_animation_tree_animation_finished"]

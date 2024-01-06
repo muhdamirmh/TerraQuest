@@ -28,6 +28,10 @@ var dialogue_line: DialogueLine:
 			queue_free()
 			return
 
+		# If the node isn't ready yet then none of the labels will be ready yet either
+		if not is_node_ready():
+			await ready
+
 		dialogue_line = next_dialogue_line
 
 		character_label.visible = not dialogue_line.character.is_empty()
@@ -52,7 +56,7 @@ var dialogue_line: DialogueLine:
 		if dialogue_line.responses.size() > 0:
 			balloon.focus_mode = Control.FOCUS_NONE
 			responses_menu.show()
-		elif dialogue_line.time != null:
+		elif dialogue_line.time != "":
 			var time = dialogue_line.text.length() * 0.02 if dialogue_line.time == "auto" else dialogue_line.time.to_float()
 			await get_tree().create_timer(time).timeout
 			next(dialogue_line.next_id)
@@ -102,7 +106,7 @@ func _on_mutated(_mutation: Dictionary) -> void:
 
 func _on_balloon_gui_input(event: InputEvent) -> void:
 	# If the user clicks on the balloon while it's typing then skip typing
-	if dialogue_label.is_typing and ((event is InputEventMouseButton and event.double_click == true and event.is_pressed()) || event.is_action_pressed("Dialog")):
+	if dialogue_label.is_typing and ((event is InputEventMouseButton and event.is_double_click()) or  event.is_action_pressed("Dialog")):
 		get_viewport().set_input_as_handled()
 		dialogue_label.skip_typing()
 		return
@@ -113,10 +117,10 @@ func _on_balloon_gui_input(event: InputEvent) -> void:
 	# When there are no response options the balloon itself is the clickable thing
 	get_viewport().set_input_as_handled()
 
-	if (event is InputEventMouseButton and event.is_pressed() and event.double_click == true) || event.is_action_pressed("Dialog"):
+	if event is InputEventMouseButton and event.is_double_click():
 		next(dialogue_line.next_id)
-#	elif event.is_action_pressed("ui_accept") and get_viewport().gui_get_focus_owner() == balloon:
-#		next(dialogue_line.next_id)
+	elif event.is_action_pressed("Dialog") and get_viewport().gui_get_focus_owner() == balloon:
+		next(dialogue_line.next_id)
 
 
 func _on_responses_menu_response_selected(response: DialogueResponse) -> void:

@@ -91,12 +91,12 @@ texture = ExtResource("2_x7vuu")
 [node name="HBoxContainer2" type="HBoxContainer" parent="MainPanel/ScrollContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Panel" type="Panel" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer2"]
+[node name="Level3" type="Panel" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer2"]
 custom_minimum_size = Vector2(350, 100)
 layout_mode = 2
 size_flags_horizontal = 0
 
-[node name="RichTextLabel" type="RichTextLabel" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer2/Panel"]
+[node name="RichTextLabel" type="RichTextLabel" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer2/Level3"]
 layout_mode = 0
 offset_left = 16.0
 offset_top = 37.0
@@ -106,7 +106,7 @@ theme_override_font_sizes/normal_font_size = 20
 bbcode_enabled = true
 text = "Selesai Peringkat 3"
 
-[node name="TextureRect" type="TextureRect" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer2/Panel"]
+[node name="TextureRect" type="TextureRect" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer2/Level3"]
 layout_mode = 0
 offset_left = 281.0
 offset_top = 30.0
@@ -114,12 +114,12 @@ offset_right = 321.0
 offset_bottom = 70.0
 texture = ExtResource("2_x7vuu")
 
-[node name="Panel2" type="Panel" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer2"]
+[node name="Level4" type="Panel" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer2"]
 custom_minimum_size = Vector2(350, 100)
 layout_mode = 2
 size_flags_horizontal = 8
 
-[node name="RichTextLabel" type="RichTextLabel" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer2/Panel2"]
+[node name="RichTextLabel" type="RichTextLabel" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer2/Level4"]
 layout_mode = 0
 offset_left = 16.0
 offset_top = 37.0
@@ -129,7 +129,7 @@ theme_override_font_sizes/normal_font_size = 20
 bbcode_enabled = true
 text = "Selesai Peringkat 4"
 
-[node name="TextureRect" type="TextureRect" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer2/Panel2"]
+[node name="TextureRect" type="TextureRect" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer2/Level4"]
 layout_mode = 0
 offset_left = 281.0
 offset_top = 30.0
@@ -140,12 +140,12 @@ texture = ExtResource("2_x7vuu")
 [node name="HBoxContainer3" type="HBoxContainer" parent="MainPanel/ScrollContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Panel" type="Panel" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer3"]
+[node name="Level5" type="Panel" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer3"]
 custom_minimum_size = Vector2(350, 100)
 layout_mode = 2
 size_flags_horizontal = 0
 
-[node name="RichTextLabel" type="RichTextLabel" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer3/Panel"]
+[node name="RichTextLabel" type="RichTextLabel" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer3/Level5"]
 layout_mode = 0
 offset_left = 16.0
 offset_top = 37.0
@@ -155,7 +155,7 @@ theme_override_font_sizes/normal_font_size = 20
 bbcode_enabled = true
 text = "Selesai Peringkat 5"
 
-[node name="TextureRect" type="TextureRect" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer3/Panel"]
+[node name="TextureRect" type="TextureRect" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer3/Level5"]
 layout_mode = 0
 offset_left = 281.0
 offset_top = 30.0
@@ -163,12 +163,12 @@ offset_right = 321.0
 offset_bottom = 70.0
 texture = ExtResource("2_x7vuu")
 
-[node name="Panel2" type="Panel" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer3"]
+[node name="Level6" type="Panel" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer3"]
 custom_minimum_size = Vector2(350, 100)
 layout_mode = 2
 size_flags_horizontal = 8
 
-[node name="RichTextLabel" type="RichTextLabel" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer3/Panel2"]
+[node name="RichTextLabel" type="RichTextLabel" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer3/Level6"]
 layout_mode = 0
 offset_left = 16.0
 offset_top = 37.0
@@ -178,7 +178,7 @@ theme_override_font_sizes/normal_font_size = 20
 bbcode_enabled = true
 text = "Selesai Peringkat 6"
 
-[node name="TextureRect" type="TextureRect" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer3/Panel2"]
+[node name="TextureRect" type="TextureRect" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer3/Level6"]
 layout_mode = 0
 offset_left = 281.0
 offset_top = 30.0

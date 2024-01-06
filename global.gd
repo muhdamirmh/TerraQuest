@@ -10,7 +10,7 @@ var buffer = false
 
 var checklvl = 0
 
-var donelvl = [0,0,0,0,0]
+var donelvl = [0,0,0,0,0,0]
 
 signal globalEnd
 signal addcoins(value : int)

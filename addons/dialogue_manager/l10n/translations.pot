@@ -125,6 +125,9 @@ msgstr ""
 msgid "buffer.show_in_filesystem"
 msgstr ""
 
+msgid "settings.invalid_test_scene"
+msgstr ""
+
 msgid "settings.revert_to_default_test_scene"
 msgstr ""
 
@@ -177,6 +180,18 @@ msgid "settings.states_message"
 msgstr ""
 
 msgid "settings.states_hint"
+msgstr ""
+
+msgid "settings.recompile_warning"
+msgstr ""
+
+msgid "settings.create_lines_for_responses_with_characters"
+msgstr ""
+
+msgid "settings.open_in_external_editor"
+msgstr ""
+
+msgid "settings.external_editor_warning"
 msgstr ""
 
 msgid "n_of_n"
