@@ -34,10 +34,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -371.5
+offset_left = -377.5
 offset_top = -217.0
 offset_right = -6.5
-offset_bottom = 217.0
+offset_bottom = 216.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -50,11 +50,18 @@ custom_minimum_size = Vector2(365, 170)
 layout_mode = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="MainPanel/ScrollContainer/VBoxContainer/Level1"]
-custom_minimum_size = Vector2(0, 40)
+custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
 theme_override_font_sizes/normal_font_size = 25
 bbcode_enabled = true
 text = "[center]Peringkat 1[/center]"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="MainPanel/ScrollContainer/VBoxContainer/Level1"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "[center]Interaksi antara Haiwan[/center]"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MainPanel/ScrollContainer/VBoxContainer/Level1"]
 custom_minimum_size = Vector2(365, 50)
@@ -83,28 +90,28 @@ layout_mode = 2
 [node name="lvl1_3" type="Button" parent="MainPanel/ScrollContainer/VBoxContainer/Level1/HBoxContainer2" groups=["Level1"]]
 custom_minimum_size = Vector2(175, 40)
 layout_mode = 2
-size_flags_horizontal = 0
+size_flags_horizontal = 6
 size_flags_vertical = 0
 disabled = true
 text = "Simbiosis"
 
-[node name="lvl1_4" type="Button" parent="MainPanel/ScrollContainer/VBoxContainer/Level1/HBoxContainer2" groups=["Level1"]]
-custom_minimum_size = Vector2(175, 40)
-layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 0
-disabled = true
-
 [node name="Level2" type="VBoxContainer" parent="MainPanel/ScrollContainer/VBoxContainer"]
-custom_minimum_size = Vector2(365, 170)
+custom_minimum_size = Vector2(365, 130)
 layout_mode = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="MainPanel/ScrollContainer/VBoxContainer/Level2"]
-custom_minimum_size = Vector2(0, 40)
+custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
 theme_override_font_sizes/normal_font_size = 25
 bbcode_enabled = true
 text = "[center]Peringkat 2[/center]"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="MainPanel/ScrollContainer/VBoxContainer/Level2"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "[center]Interaksi antara Tumbuhan[/center]"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MainPanel/ScrollContainer/VBoxContainer/Level2"]
 custom_minimum_size = Vector2(365, 50)
@@ -116,7 +123,7 @@ layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 disabled = true
-text = "Mangsa-pemangsa"
+text = "Persaingan"
 
 [node name="lvl2_2" type="Button" parent="MainPanel/ScrollContainer/VBoxContainer/Level2/HBoxContainer" groups=["Level2"]]
 custom_minimum_size = Vector2(175, 40)
@@ -124,37 +131,25 @@ layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 disabled = true
-text = "Persaingan"
-
-[node name="HBoxContainer2" type="HBoxContainer" parent="MainPanel/ScrollContainer/VBoxContainer/Level2"]
-custom_minimum_size = Vector2(365, 50)
-layout_mode = 2
-
-[node name="lvl2_3" type="Button" parent="MainPanel/ScrollContainer/VBoxContainer/Level2/HBoxContainer2" groups=["Level2"]]
-custom_minimum_size = Vector2(175, 40)
-layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 0
-disabled = true
 text = "Simbiosis"
 
-[node name="lvl2_4" type="Button" parent="MainPanel/ScrollContainer/VBoxContainer/Level2/HBoxContainer2" groups=["Level2"]]
-custom_minimum_size = Vector2(175, 40)
-layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 0
-disabled = true
-
 [node name="Level3" type="VBoxContainer" parent="MainPanel/ScrollContainer/VBoxContainer"]
-custom_minimum_size = Vector2(365, 170)
+custom_minimum_size = Vector2(365, 130)
 layout_mode = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="MainPanel/ScrollContainer/VBoxContainer/Level3"]
-custom_minimum_size = Vector2(0, 40)
+custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
 theme_override_font_sizes/normal_font_size = 25
 bbcode_enabled = true
 text = "[center]Peringkat 3[/center]"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="MainPanel/ScrollContainer/VBoxContainer/Level3"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "[center]Kepentingan Interaksi antara Kehidupan kepada Ekosistem[/center]"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MainPanel/ScrollContainer/VBoxContainer/Level3"]
 custom_minimum_size = Vector2(365, 50)
@@ -163,48 +158,29 @@ layout_mode = 2
 [node name="lvl3_1" type="Button" parent="MainPanel/ScrollContainer/VBoxContainer/Level3/HBoxContainer" groups=["Level3"]]
 custom_minimum_size = Vector2(175, 40)
 layout_mode = 2
-size_flags_horizontal = 0
+size_flags_horizontal = 6
 size_flags_vertical = 0
 disabled = true
-text = "Mangsa-pemangsa"
-
-[node name="lvl3_2" type="Button" parent="MainPanel/ScrollContainer/VBoxContainer/Level3/HBoxContainer" groups=["Level3"]]
-custom_minimum_size = Vector2(175, 40)
-layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 0
-disabled = true
-text = "Persaingan"
-
-[node name="HBoxContainer2" type="HBoxContainer" parent="MainPanel/ScrollContainer/VBoxContainer/Level3"]
-custom_minimum_size = Vector2(365, 50)
-layout_mode = 2
-
-[node name="lvl3_3" type="Button" parent="MainPanel/ScrollContainer/VBoxContainer/Level3/HBoxContainer2" groups=["Level3"]]
-custom_minimum_size = Vector2(175, 40)
-layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 0
-disabled = true
-text = "Simbiosis"
-
-[node name="lvl3_4" type="Button" parent="MainPanel/ScrollContainer/VBoxContainer/Level3/HBoxContainer2" groups=["Level3"]]
-custom_minimum_size = Vector2(175, 40)
-layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 0
-disabled = true
+text = "Kepentingan-kepentingan
+"
 
 [node name="Level4" type="VBoxContainer" parent="MainPanel/ScrollContainer/VBoxContainer"]
-custom_minimum_size = Vector2(365, 170)
+custom_minimum_size = Vector2(365, 180)
 layout_mode = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="MainPanel/ScrollContainer/VBoxContainer/Level4"]
-custom_minimum_size = Vector2(0, 40)
+custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
 theme_override_font_sizes/normal_font_size = 25
 bbcode_enabled = true
 text = "[center]Peringkat 4[/center]"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="MainPanel/ScrollContainer/VBoxContainer/Level4"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "[center]Kepupusan Spesies[/center]"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MainPanel/ScrollContainer/VBoxContainer/Level4"]
 custom_minimum_size = Vector2(365, 50)
@@ -216,7 +192,7 @@ layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 disabled = true
-text = "Mangsa-pemangsa"
+text = "Haiwan yang telah pupus"
 
 [node name="lvl4_2" type="Button" parent="MainPanel/ScrollContainer/VBoxContainer/Level4/HBoxContainer" groups=["Level4"]]
 custom_minimum_size = Vector2(175, 40)
@@ -224,7 +200,8 @@ layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 disabled = true
-text = "Persaingan"
+text = "Haiwan dan tumbuhan
+yang diancam kepupusan"
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="MainPanel/ScrollContainer/VBoxContainer/Level4"]
 custom_minimum_size = Vector2(365, 50)
@@ -233,28 +210,30 @@ layout_mode = 2
 [node name="lvl4_3" type="Button" parent="MainPanel/ScrollContainer/VBoxContainer/Level4/HBoxContainer2" groups=["Level4"]]
 custom_minimum_size = Vector2(175, 40)
 layout_mode = 2
-size_flags_horizontal = 0
+size_flags_horizontal = 6
 size_flags_vertical = 0
 disabled = true
-text = "Simbiosis"
-
-[node name="lvl4_4" type="Button" parent="MainPanel/ScrollContainer/VBoxContainer/Level4/HBoxContainer2" groups=["Level4"]]
-custom_minimum_size = Vector2(175, 40)
-layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 0
-disabled = true
+text = "Faktor yang menyebabkan
+haiwan dan tumbuhan
+diancam kepupusan"
 
 [node name="Level5" type="VBoxContainer" parent="MainPanel/ScrollContainer/VBoxContainer"]
-custom_minimum_size = Vector2(365, 170)
+custom_minimum_size = Vector2(365, 130)
 layout_mode = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="MainPanel/ScrollContainer/VBoxContainer/Level5"]
-custom_minimum_size = Vector2(0, 40)
+custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
 theme_override_font_sizes/normal_font_size = 25
 bbcode_enabled = true
 text = "[center]Peringkat 5[/center]"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="MainPanel/ScrollContainer/VBoxContainer/Level5"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "[center]Pemeliharaan Haiwan dan Tumbuhan[/center]"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MainPanel/ScrollContainer/VBoxContainer/Level5"]
 custom_minimum_size = Vector2(365, 50)
@@ -266,7 +245,7 @@ layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 disabled = true
-text = "Mangsa-pemangsa"
+text = "Tentang pemeliharaan"
 
 [node name="lvl5_2" type="Button" parent="MainPanel/ScrollContainer/VBoxContainer/Level5/HBoxContainer" groups=["Level5"]]
 custom_minimum_size = Vector2(175, 40)
@@ -274,37 +253,25 @@ layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 disabled = true
-text = "Persaingan"
-
-[node name="HBoxContainer2" type="HBoxContainer" parent="MainPanel/ScrollContainer/VBoxContainer/Level5"]
-custom_minimum_size = Vector2(365, 50)
-layout_mode = 2
-
-[node name="lvl5_3" type="Button" parent="MainPanel/ScrollContainer/VBoxContainer/Level5/HBoxContainer2" groups=["Level5"]]
-custom_minimum_size = Vector2(175, 40)
-layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 0
-disabled = true
-text = "Simbiosis"
-
-[node name="lvl5_4" type="Button" parent="MainPanel/ScrollContainer/VBoxContainer/Level5/HBoxContainer2" groups=["Level5"]]
-custom_minimum_size = Vector2(175, 40)
-layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 0
-disabled = true
+text = "Langkah pemeliharaan"
 
 [node name="Level6" type="VBoxContainer" parent="MainPanel/ScrollContainer/VBoxContainer"]
 custom_minimum_size = Vector2(365, 170)
 layout_mode = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="MainPanel/ScrollContainer/VBoxContainer/Level6"]
-custom_minimum_size = Vector2(0, 40)
+custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
 theme_override_font_sizes/normal_font_size = 25
 bbcode_enabled = true
 text = "[center]Peringkat 6[/center]"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="MainPanel/ScrollContainer/VBoxContainer/Level6"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "[center]Pemuliharaan Haiwan dan Tumbuhan[/center]"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MainPanel/ScrollContainer/VBoxContainer/Level6"]
 custom_minimum_size = Vector2(365, 50)
@@ -316,7 +283,7 @@ layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 disabled = true
-text = "Mangsa-pemangsa"
+text = "Tentang pemuliharaan"
 
 [node name="lvl6_2" type="Button" parent="MainPanel/ScrollContainer/VBoxContainer/Level6/HBoxContainer" groups=["Level6"]]
 custom_minimum_size = Vector2(175, 40)
@@ -324,7 +291,14 @@ layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 disabled = true
-text = "Persaingan"
+text = "Aktiviti pemuliharaan"
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="MainPanel/ScrollContainer/VBoxContainer/Level6"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "[center]Kepentingan Pemeliharaan dan Pemuliharaan[/center]"
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="MainPanel/ScrollContainer/VBoxContainer/Level6"]
 custom_minimum_size = Vector2(365, 50)
@@ -333,17 +307,10 @@ layout_mode = 2
 [node name="lvl6_3" type="Button" parent="MainPanel/ScrollContainer/VBoxContainer/Level6/HBoxContainer2" groups=["Level6"]]
 custom_minimum_size = Vector2(175, 40)
 layout_mode = 2
-size_flags_horizontal = 0
+size_flags_horizontal = 6
 size_flags_vertical = 0
 disabled = true
-text = "Simbiosis"
-
-[node name="lvl6_4" type="Button" parent="MainPanel/ScrollContainer/VBoxContainer/Level6/HBoxContainer2" groups=["Level6"]]
-custom_minimum_size = Vector2(175, 40)
-layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 0
-disabled = true
+text = "Kepentingan-kepentingan"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="MainPanel"]
 layout_mode = 0
@@ -366,9 +333,15 @@ text = "Kembali"
 [connection signal="pressed" from="MainPanel/ScrollContainer/VBoxContainer/Level1/HBoxContainer/lvl1_1" to="." method="_on_lvl_1_1_pressed"]
 [connection signal="pressed" from="MainPanel/ScrollContainer/VBoxContainer/Level1/HBoxContainer/lvl1_2" to="." method="_on_lvl_1_2_pressed"]
 [connection signal="pressed" from="MainPanel/ScrollContainer/VBoxContainer/Level1/HBoxContainer2/lvl1_3" to="." method="_on_lvl_1_3_pressed"]
-[connection signal="pressed" from="MainPanel/ScrollContainer/VBoxContainer/Level1/HBoxContainer2/lvl1_4" to="." method="_on_lvl_1_4_pressed"]
 [connection signal="pressed" from="MainPanel/ScrollContainer/VBoxContainer/Level2/HBoxContainer/lvl2_1" to="." method="_on_lvl_2_1_pressed"]
 [connection signal="pressed" from="MainPanel/ScrollContainer/VBoxContainer/Level2/HBoxContainer/lvl2_2" to="." method="_on_lvl_2_2_pressed"]
-[connection signal="pressed" from="MainPanel/ScrollContainer/VBoxContainer/Level2/HBoxContainer2/lvl2_3" to="." method="_on_lvl_2_3_pressed"]
-[connection signal="pressed" from="MainPanel/ScrollContainer/VBoxContainer/Level2/HBoxContainer2/lvl2_4" to="." method="_on_lvl_2_4_pressed"]
+[connection signal="pressed" from="MainPanel/ScrollContainer/VBoxContainer/Level3/HBoxContainer/lvl3_1" to="." method="_on_lvl_3_1_pressed"]
+[connection signal="pressed" from="MainPanel/ScrollContainer/VBoxContainer/Level4/HBoxContainer/lvl4_1" to="." method="_on_lvl_4_1_pressed"]
+[connection signal="pressed" from="MainPanel/ScrollContainer/VBoxContainer/Level4/HBoxContainer/lvl4_2" to="." method="_on_lvl_4_2_pressed"]
+[connection signal="pressed" from="MainPanel/ScrollContainer/VBoxContainer/Level4/HBoxContainer2/lvl4_3" to="." method="_on_lvl_4_3_pressed"]
+[connection signal="pressed" from="MainPanel/ScrollContainer/VBoxContainer/Level5/HBoxContainer/lvl5_1" to="." method="_on_lvl_5_1_pressed"]
+[connection signal="pressed" from="MainPanel/ScrollContainer/VBoxContainer/Level5/HBoxContainer/lvl5_2" to="." method="_on_lvl_5_2_pressed"]
+[connection signal="pressed" from="MainPanel/ScrollContainer/VBoxContainer/Level6/HBoxContainer/lvl6_1" to="." method="_on_lvl_6_1_pressed"]
+[connection signal="pressed" from="MainPanel/ScrollContainer/VBoxContainer/Level6/HBoxContainer/lvl6_2" to="." method="_on_lvl_6_2_pressed"]
+[connection signal="pressed" from="MainPanel/ScrollContainer/VBoxContainer/Level6/HBoxContainer2/lvl6_3" to="." method="_on_lvl_6_3_pressed"]
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]

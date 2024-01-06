@@ -26,40 +26,81 @@ func import_resources_data():
 	file.close()
 
 	print(example_dict)
+	print(example_dict[0][0])
 
 	
 func _on_back_pressed():
 	get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")
 	MusicController.playsfxbutton()
-func settext(value: int):
+	
+func settext(value: String):
 	$MainPanel/RichTextLabel.clear()
-	$MainPanel/RichTextLabel.append_text(example_dict[value][1])
+	for i in example_dict.size():
+		if example_dict[i][0] == value:
+			$MainPanel/RichTextLabel.append_text(example_dict[i][1])
 
 func _on_lvl_1_1_pressed():
-	settext(0)
+	MusicController.playsfxbutton()
+	settext("1_1")
 
 func _on_lvl_1_2_pressed():
-	settext(1)
+	MusicController.playsfxbutton()
+	settext("1_2")
 	
 func _on_lvl_1_3_pressed():
-	settext(2)
-
-
-func _on_lvl_1_4_pressed():
-	settext(3)
-
+	MusicController.playsfxbutton()
+	settext("1_3")
 
 func _on_lvl_2_1_pressed():
-	pass # Replace with function body.
+	MusicController.playsfxbutton()
+	settext("2_1")
 
 
 func _on_lvl_2_2_pressed():
-	pass # Replace with function body.
+	MusicController.playsfxbutton()
+	settext("2_2")
 
 
-func _on_lvl_2_3_pressed():
-	pass # Replace with function body.
+func _on_lvl_3_1_pressed():
+	MusicController.playsfxbutton()
+	settext("3_1")
 
 
-func _on_lvl_2_4_pressed():
-	pass # Replace with function body.
+func _on_lvl_4_1_pressed():
+	MusicController.playsfxbutton()
+	settext("4_1")
+
+
+func _on_lvl_4_2_pressed():
+	MusicController.playsfxbutton()
+	settext("4_2")
+
+
+func _on_lvl_4_3_pressed():
+	MusicController.playsfxbutton()
+	settext("4_3")
+
+
+func _on_lvl_5_1_pressed():
+	MusicController.playsfxbutton()
+	settext("5_1")
+
+
+func _on_lvl_5_2_pressed():
+	MusicController.playsfxbutton()
+	settext("5_2")
+
+
+func _on_lvl_6_1_pressed():
+	MusicController.playsfxbutton()
+	settext("6_1")
+
+
+func _on_lvl_6_2_pressed():
+	MusicController.playsfxbutton()
+	settext("6_2")
+
+
+func _on_lvl_6_3_pressed():
+	MusicController.playsfxbutton()
+	settext("6_3")
