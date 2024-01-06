@@ -17,37 +17,69 @@ set Global.lvlpoints += 1
 Jawapan anda [color=red]salah[/color].
 => END
 
-~ instruct
-=>< head
-
-=>< tail
-
-=> END
 
 ~ sabretooth
 =>< head
-Arctic Fox: Oh!
+Sabretooth: Hai, saya ialah seekor harimau bertaring lengkung. Nama saya dalam bahasa Ingeris ialah Sabretooth
+Sabretooth: Saya tinggal di sini dan kalau anda perasan, tempat ini dikelilingi salji.
+Sabretooth: Salji boleh dijumpai di kawasan berdekatan Kutub Utara dan Kutub Selatan.
+Sabretooth: Salji juga boleh ditemui pada musim sejuk di negara yang tidak berada di garisan khatulistiwa.
+Sabretooth: Cukuplah tentang salji, sekarang saya mahu bercerita tentang pemuliharaan haiwan dan tumbuhan.
+Sabretooth: Pemuliharaan bermaksud mengembalikan haiwan dan tumbuhan kepada keadaan asal
+Sabretooth: Aktiviti pemuliharaan yang boleh dilakukan antaranya ialah membina pusat pemuliharaan
+Sabretooth: Pusat pemuliharaan haiwan memastikan haiwan-haiwan mempunyai peluang lebih tinggi untuk hidup di habitat sebenar.
+Sabretooth: Contohnya, pusat pemuliharaan penyu dan pusat rehabilitasi orang utan.
+Sabretooth: Yang kedua ialah...
+Sabretooth: Aduh, saya tidak ingat lah..
+Sabretooth: Bertanya lah dengan si burung Penguin di sana, mungkin dia tahu.
+Sabretooth: Selamat jalan dan hati-hati ketika menerokai tempat ini!
 
 =>< tail
 => END
 
 ~ penguin
 =>< head
-Penguin: Oh!
+Penguin: Oh hai! Saya ialah seekor burung Penguin!
+Penguin: Walaupun saya ialah burung, saya tidak boleh terbang macam ayam. Hahaha!
+Penguin: Apa yang membuatkan awak ke mari?
+- Bolehkah beritahu saya tentang aktiviti pemuliharaan?
+Penguin: Boleh sahaja, menanam semula pokok adalah salah satu aktiviti pemuliharaan.
+Penguin: Penanaman semula pokok dilakukan bagi menggantikan kawasan hutan yang telah musnah akibat pembalakan.
+Penguin: Biji benih atau anak pokok ditanam di kawasan yang telah dibalak.
+Penguin: Itu sahaja daripada saya, sekarang saya mahu pergi memburu mencari makanan
+Penguin: Selamat tinggal!
 
 =>< tail
 => END
 
 ~ walrus
 =>< head
-Walrus: Oh!
+Walrus: Helo, saya Walrus. Saya agak sama seperti anjing laut tetapi saya mempunyai taring yang panjang!
+Walrus: Saya makan haiwan seperti ketam, udang, kerang dan pelbagai lagi.
+Walrus: Tetapi, sekarang saya mahu bercerita tentang kepentingan pemeliharaan dan pemuliharaan.
+Walrus: Pemeliharaan dan pemuliharaan dapat mengelakkan kepupusan
+Walrus: Faktor yang menjadi ancaman kepada haiwan dan tumbuhan berjaya dikurangkan.
+Walrus: Populasi haiwan dan tumbuhan juga dapat ditingkatkan.
+Walrus: Selain itu, ianya juga penting untuk memastikan haiwan dan tumbuhan tidak dieksploitasi secara melampau
+Walrus: Amalan mengguna dan mengitar semula barangan dapat mengurangkan kebergantungan kepada sumber semula jadi.
+Walrus: Itu sahaja daripada saya, saya perlu kembali ke kawanan saya.
+Walrus: Selamat tinggal!
 
 =>< tail
 => END
 
 ~ mammoth
 =>< head
-Mammoth: Oh!
+Mamot: Helo di sana, nama saya Mamot. Saya ialah seekor gajah purba yang mempunyai gading yang sangat panjang!
+Soalan Bonus: Adakah Mamot sebuah spesies yang sudah pupus?
+- Ya =>< correct
+- Tidak =>< wrong
+Mamot: Mari kita sambung kepada kepentingan pemeliharaan dan pemuliharaan.
+Mamot: Ianya juga penting kerana dapat mengekalkan persekitaran yang bersih dan sihat.
+Mamot: Aktiviti pembalakan yang terkawal serta aktiviti penanaman semula dapat mengekalkan keseimbangan gas oksigen dan gas karbon dioksida.
+Mamot: Akhir sekali, pemeliharaan dan pemuliharaan dapat mengelakkan kehilangan habitat.
+Mamot: Penetapan beberapa kawasan sebagai hutan simpan, taman marin dan tapak RAMSAR dapat mengelakkan haiwan dan tumbuhan kehilangan habitat.
+Mamot: Itu sahaja daripada saya, selamat jalan wahai manusia!
 
 =>< tail
 => END
@@ -58,7 +90,55 @@ set Global.lvlpoints = 0
 
 Tiba masanya untuk anda menjawab Kuiz Bintang Peringkat Salji!
 
+Soalan 1: Apakah maksud pemuliharaan?
+- Mengekalkan keseimbangan suatu spesies =>< wrong
+- Mengembalikan haiwan dan tumbuhan kepada keadaan asal  =>< correct 
+- Membina sebuah habitat yang baru bagi suatu spesies =>< wrong
 
+Soalan 2: Berapakah aktiviti pemuliharaan yang disebut?
+- 2  =>< correct 
+- 3 =>< wrong
+- 1 =>< wrong
+
+Soalan 3: Berikut ialah aktiviti pemuliharaan kecuali?
+- Membina pusat pemuliharaan  =>< wrong
+- Menanam semula pokok =>< wrong
+- Menjalankan kempen alam sekitar =>< correct 
+
+Soalan 4: Yang manakah antara berikut berkait dengan membina pusat pemuliharaan?
+- Haiwan mempunyai peluang tinggi untuk hidup di habitat sebenar.  =>< correct 
+- Haiwan akan lebih selesa berhidupan bersama manusia =>< wrong
+- Haiwan tidak lagi mahu tinggal di habitat sebenar =>< wrong
+
+Soalan 5: Yang manakah antara berikut berkait dengan menanam semula pokok?
+- Memastikan aktiviti pembalakan kekal berterusan  =>< wrong
+- Menambah bilangan pokok yang sedia ada menjadi lebih banyak  =>< wrong 
+- Menggantikan kawasan hutan yang telah musnah =>< correct
+
+Soalan 6: Berapakah kepentingan pemeliharaan dan pemuliharaan?
+- 5 =>< wrong
+- 4  =>< correct 
+- 3 =>< wrong
+
+Soalan 7: Yang manakah antara berikut berkait dengan mengelakkan kepupusan?
+- Populasi haiwan dan tumbuhan dapat ditingkatkan =>< correct
+- Populasi haiwan dan tumbuhan dapat dikekalkan  =>< wrong
+- Populasi haiwan dan tumbuhan dapat dikurangkan    =>< wrong 
+
+Soalan 8: Yang manakah antara berikut berkait dengan memastikan spesies tidak dieksploitasi secara melampau?
+- Mengekalkan kebergantungan kepada sumber semula jadi =>< wrong
+- Menambahkan kebergantungan kepada sumber semula jadi  =>< wrong 
+- Mengurangkan kebergantungan kepada sumber semula jadi  =>< correct
+
+Soalan 9: Yang manakah antara berikut berkait dengan mengekalkan persekitaran yang bersih dan sihat?
+- Menambahkan bilangan gas oksigen dan gas karbon dioksida.  =>< wrong
+- Mengekalkan keseimbangan gas oksigen dan gas karbon dioksida.  =>< correct 
+- Memastikan kemerosotan gas oksigen dan gas karbon dioksida.   =>< wrong
+
+Soalan 10: Yang manakah antara berikut berkait dengan mengelakkan kehilangan habitat?
+- Penetapan kawasan sebagai hutan simpan, taman marin dan tapak RAMSAR =>< correct 
+- Penetapan kawasan sebagai zoo, sarkas haiwan =>< wrong
+- Penetapan kawasan sebagai kawasan aktiviti pembalakan =>< wrong
 
 Anda mendapat {{Global.lvlpoints}} daripada 10 soalan betul!
 Peringkat 6 telah selesai!

@@ -17,37 +17,65 @@ set Global.lvlpoints += 1
 Jawapan anda [color=red]salah[/color].
 => END
 
-~ instruct
-=>< head
-
-=>< tail
-
-=> END
 
 ~ crab
 =>< head
-Crab: Oh!
+Ketam: Selamat datang ke Laut! Saya sang Ketam dan lautan luas ini ialah rumah aku. 
+Ketam: Laut ialah sebuah kumpulan air masin yg merangkumi sebahagian besar muka bumi.
+Ketam: Kehidupan bukan sahaja hanya ada di darat, di lautan juga ada seperti saya!
+Ketam: Pada hari ini, saya akan ceritakan tentang pemeliharaan haiwan dan tumbuhan.
+Ketam: Pemeliharaan bermaksud langkah mengekalkan haiwan dan tumbuhan kepada keadaan asal yang seimbang
+Ketam: Pemeliharaan ini penting untuk menangani masalah kepupusan suatu spesies.
+Ketam: Jadi, terdapat langkah-langkah untuk melaksanakan proses pemeliharaan
+Ketam: Salah satunya yang dapat saya beritahu ialah dengan menjalankan pembalakan terpilih
+Ketam: Pembalakan pokok secara terpilih dilaksanakan bagi mengurangkan impak kepada alam sekitar
+Ketam: Kalau mahu tahu lebih lagi, berjumpa lah dengan haiwan lautan yang lain disini.
+Ketam: Selamat tinggal sang manusia!
 
 =>< tail
 => END
 
 ~ jellyfish
 =>< head
-Jellyfish: Oh!
+Ubur-ubur: Helo, saya Ubur-ubur. Saya akan sambung bercerita langkah-langkah untuk melaksanakan proses pemeliharaan
+Ubur-ubur: Seterusnya, masyarakat perlu dididik mengenai kepentingan melindungi haiwan dan tumbuhan daripada ancaman kepupusan
+Ubur-ubur: Masyarakat perlu terdedah dengan bahan seperti kempen Hari Hidupan Liar Sedunia atau melihat pelbagai dokumentari mengenai alam di bumi.
+Ubur-ubur: Selain itu, penjualan produk daripada spesies yang terancam perlu diboikot.
+Ubur-ubur: Pengguna dan pembeli harus bijak memilih dengan tidak membeli produk daripada haiwan dan tumbuhan yang terancam.
+Ubur-ubur: Itu sahaja lah yang saya mampu beritahu.
+Ubur-ubur: Harap ilmu ini dapat membantu perjalanan anda di sekitar lautan ini.
+Ubur-ubur: Selamat jalan, moga kita berjumpa lagi!
 
 =>< tail
 => END
 
 ~ stingray
 =>< head
-Stingray: Oh!
+Ikan Pari: (sedang tidur)
+- Kejutkan ia
+- Biarkan sahaja => END
+Ikan Pari: Oh, mengapa awak kejutkan saya? Saya sedang nyenyak tidur..
+- Boleh awak beritahu tentang langkah melaksanakan proses pemeliharaan?
+Ikan Pari: Boleh tapi saya cuma tahu dua sahaja.
+Ikan Pari: Salah satunya ialah undang-undang perlu dikuatkuasakan dengan tegasnya bagi melindungi haiwan daripada diancam kepupusan
+Ikan Pari: Antara haiwan yang dilindungi di Malaysia termasuklah harimau Malaya, tapir Malaya, orang utan, gajah, penyu dan tikus kesturi.
+Ikan Pari: Selain itu, mengitar semula barangan juga dapat membantu menyelamatkan haiwan dan tumbuhan daripada terus dieksploitasi
+Ikan Pari: Barang-barang yang boleh dikitar semula contohnya ialah kertas dan beg plastik.
+Ikan Pari: Cukup dua ilmu saya sudah bagi, sekarang saya mahu sambung tidur..
+Ikan Pari: Selamat jalan!
 
 =>< tail
 => END
 
 ~ shark
 =>< head
-Shark: Oh!
+Ikan Jerung: Hei kawan, saya terdengar perbualan awak tadi bersama Ikan Pari, awak mahu tahu tak tentang satu lagi langkahnya?
+- Ya saya mahu
+Ikan Jerung: Baiklah, yang saya tahu ialah hutan dan taman marin perlu diwartakan sebagai kawasan yang dilindungi
+Ikan Jerung: Kawasan hutan simpan seperti Taman Negara, Taman Marin dan Tapak RAMSAR dilindungi oleh undang-undang.
+Ikan Jerung: Sesiapa yang melanggar undang-undang tersebut akan dikenakan hukuman.
+Ikan Jerung: Itu sahajalah daripada saya, harap awak pelajari sesuatu yang baru.
+Ikan Jerung: Selamat tinggal kawanku!
 
 =>< tail
 => END
@@ -58,7 +86,56 @@ set Global.lvlpoints = 0
 
 Tiba masanya untuk anda menjawab Kuiz Bintang Peringkat Laut!
 
+Soalan 1: Apakah maksud pemeliharaan?
+- Langkah mengekalkan suatu spesies kepada keadaan asal yang seimbang  =>< correct 
+- Langkah memindahkan suatu spesies ke habitat yang berlainan =>< wrong
+- Langkah menjaga haiwan dengan baik di zoo =>< wrong
 
+Soalan 2: Mengapakah perlunya pemeliharaan?
+- Dapat membiakkan suatu spesies dengan lebih cepat =>< wrong
+- Dapat tangani masalah kepupusan suatu spesies  =>< correct 
+- Dapat memastikan alam sekitar terjaga =>< wrong
+
+Soalan 3: Berapakah langkah untuk melaksanakan proses pemeliharaan?
+- 5  =>< wrong
+- 4 =>< wrong
+- 6 =>< correct
+
+Soalan 4: Berikut ialah langkah untuk melaksanakan proses pemeliharaan kecuali?
+- [[Menjalankan pembalakan terpilih|Mendidik masyarakat|Memboikot produk daripada spesies yang terancam]]  =>< wrong
+- [[Menguatkuasakan undang-undang|Mengitar semula barang|Melindungi hutan dan taman marin]] =>< wrong
+- [[Membeli barangan yang lebih mesra alam sekitar|Memelihara banyak jenis haiwan peliharaan]] =>< correct 
+
+
+Soalan 5: Yang manakah antara berikut berkait dengan menjalankan pembalakan terpilih?
+- Tidak membeli produk daripada haiwan dan tumbuhan yang terancam  =>< wrong
+- Dapat tahu tentang kepentingan melindungi haiwan dan tumbuhan  =>< wrong 
+- Dapat mengurangkan impak kepada alam sekitar  =>< correct
+
+Soalan 6: Yang manakah antara berikut berkait dengan mendidik masyarakat?
+- Dapat melindungi haiwan daripada diancam kepupusan =>< wrong
+- Dapat tahu tentang kepentingan melindungi haiwan dan tumbuhan  =>< correct 
+- Dapat menyelamatkan suatu spesies daripada terus dieksploitasi =>< wrong
+
+Soalan 7: Yang manakah antara berikut berkait dengan memboikot produk daripada spesies yang terancam?
+- Tidak membeli produk daripada haiwan dan tumbuhan yang terancam =>< correct
+- Pembebasan gas seperti karbon dioksida =>< wrong
+- Pembinaan jalan raya dan pembangunan bandar baharu yang tidak terancang   =>< wrong 
+
+Soalan 8: Yang manakah antara berikut berkait dengan menguatkuasakan undang-undang?
+- Dapat mengurangkan impak kepada alam sekitar =>< wrong
+- Dapat menyelamatkan suatu spesies daripada terus dieksploitasi  =>< wrong 
+- Dapat melindungi haiwan daripada diancam kepupusan  =>< correct
+
+Soalan 9: Yang manakah antara berikut berkait dengan mengitar semula barang?
+- Tidak membeli produk daripada haiwan dan tumbuhan yang terancam   =>< wrong
+- Dapat menyelamatkan suatu spesies daripada terus dieksploitasi  =>< correct 
+- Taman Negara, Taman Marin dan Tapak RAMSAR dilindungi oleh undang-undang   =>< wrong
+
+Soalan 10: Yang manakah antara berikut berkait dengan melindungi hutan dan taman marin?
+- Taman Negara, Taman Marin dan Tapak RAMSAR dilindungi oleh undang-undang =>< correct 
+- Dapat tahu tentang kepentingan melindungi haiwan dan tumbuhan =>< wrong
+- Dapat mengurangkan impak kepada alam sekitar =>< wrong
 
 Anda mendapat {{Global.lvlpoints}} daripada 10 soalan betul!
 Peringkat 5 telah selesai!
