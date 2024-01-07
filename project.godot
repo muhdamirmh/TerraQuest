@@ -14,7 +14,8 @@ config/name="TerraQuest"
 run/main_scene="res://Scenes/main_menu.tscn"
 config/use_custom_user_dir=true
 config/features=PackedStringArray("4.1", "Mobile")
-config/icon="res://icon.svg"
+config/icon="res://icon.png"
+config/windows_native_icon="res://icon.ico"
 
 [autoload]
 
