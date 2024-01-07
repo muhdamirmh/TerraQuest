@@ -29,7 +29,6 @@
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3v5dy"]
 texture = ExtResource("2_xtlia")
-use_texture_padding = false
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -1257,7 +1256,6 @@ size = Vector2(187, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a2i53"]
 texture = ExtResource("4_olw16")
-use_texture_padding = false
 2:0/0 = 0
 2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 2:0/0/physics_layer_0/angular_velocity = 0.0

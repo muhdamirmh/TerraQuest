@@ -4,6 +4,7 @@ extends Level
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	num = 5
+	n = num - 1
 	dialogPath = "res://Dialog/Level5.dialogue"
 	ready2()
 	

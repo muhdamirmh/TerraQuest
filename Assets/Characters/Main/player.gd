@@ -32,6 +32,8 @@ var poscheckpoint : Vector2
 
 var wallparent
 
+var usersave = UserSave
+
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -39,6 +41,7 @@ var direction : Vector2 = Vector2.ZERO
 
 func _ready():
 	animation_tree.active = true
+	usersave = UserSave.load_or_create()
 	
 func _input(event:InputEvent):
 	if(event.is_action_pressed("Down") && is_on_floor()):
@@ -195,3 +198,8 @@ func _on_hitbox_area_exited(area):
 func addcoins(coin):
 	coins += coin
 	uimanager.update_coins_display(coins)
+	if coins == get_parent().maxcoins[get_parent().n]:
+		Global.donecoin[get_parent().n] = get_parent().n + 1
+		if usersave:
+			usersave.donecoin = Global.donecoin
+			usersave.save()

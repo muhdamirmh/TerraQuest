@@ -3,9 +3,11 @@ extends Node2D
 class_name Level
 
 var num : int
+var n : int
 var dialogPath = ""
 var keyword = "tail"
 var paused = false
+var maxcoins = [10, 17, 14, 15, 16, 17]
 
 @onready var pause_menu = $CanvasLayer/PauseMenu
 
@@ -29,16 +31,20 @@ func endlvl(num):
 	
 	get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")
 	Global.itemget = false
+	Global.isplaying[n] = false
 	get_node("Player/Camera2D").set_zoom(Vector2(1,1))
 	MusicController.stoplevel(num)
 	Global.checklvl = 0
 	GlobalParallaxBackground.show()
+	
 	
 func ready2():
 	DialogueManager.show_example_dialogue_balloon(load(dialogPath), keyword)
 	MusicController.stopmainmenu()
 	MusicController.playlevel(num)
 	GlobalParallaxBackground.hide()
+	Global.isplaying[n] = true
+	print(n)
 	
 func pauseMenu():
 	if paused:

@@ -1,6 +1,9 @@
 class_name UserSave extends Resource
 
 @export var donelvl: Array = []
+@export var donequiz: Array = []
+@export var donecoin: Array = []
+
 @export var musicmute: bool
 @export var sfxmute: bool
 @export var musicbutton: bool

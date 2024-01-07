@@ -53,7 +53,9 @@ Ubur-ubur: Selamat jalan, moga kita berjumpa lagi!
 =>< head
 Ikan Pari: (sedang tidur)
 - Kejutkan ia
-- Biarkan sahaja => END
+- Biarkan sahaja 
+	=>< tail
+	=> END
 Ikan Pari: Oh, mengapa awak kejutkan saya? Saya sedang nyenyak tidur..
 - Boleh awak beritahu tentang langkah melaksanakan proses pemeliharaan?
 Ikan Pari: Boleh tapi saya cuma tahu dua sahaja.

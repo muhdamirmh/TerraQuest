@@ -39,15 +39,15 @@ offset_bottom = 453.0
 custom_minimum_size = Vector2(0, 400)
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MainPanel/ScrollContainer/VBoxContainer"]
+[node name="Level" type="HBoxContainer" parent="MainPanel/ScrollContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Level1" type="Panel" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer"]
+[node name="Level1" type="Panel" parent="MainPanel/ScrollContainer/VBoxContainer/Level"]
 custom_minimum_size = Vector2(350, 100)
 layout_mode = 2
 size_flags_horizontal = 0
 
-[node name="RichTextLabel" type="RichTextLabel" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer/Level1"]
+[node name="RichTextLabel" type="RichTextLabel" parent="MainPanel/ScrollContainer/VBoxContainer/Level/Level1"]
 layout_mode = 0
 offset_left = 16.0
 offset_top = 37.0
@@ -57,7 +57,7 @@ theme_override_font_sizes/normal_font_size = 20
 bbcode_enabled = true
 text = "Selesai Peringkat 1"
 
-[node name="TextureRect" type="TextureRect" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer/Level1"]
+[node name="TextureRect" type="TextureRect" parent="MainPanel/ScrollContainer/VBoxContainer/Level/Level1"]
 layout_mode = 0
 offset_left = 281.0
 offset_top = 30.0
@@ -65,12 +65,12 @@ offset_right = 321.0
 offset_bottom = 70.0
 texture = ExtResource("2_x7vuu")
 
-[node name="Level2" type="Panel" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer"]
+[node name="Level2" type="Panel" parent="MainPanel/ScrollContainer/VBoxContainer/Level"]
 custom_minimum_size = Vector2(350, 100)
 layout_mode = 2
 size_flags_horizontal = 8
 
-[node name="RichTextLabel" type="RichTextLabel" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer/Level2"]
+[node name="RichTextLabel" type="RichTextLabel" parent="MainPanel/ScrollContainer/VBoxContainer/Level/Level2"]
 layout_mode = 0
 offset_left = 16.0
 offset_top = 37.0
@@ -80,7 +80,7 @@ theme_override_font_sizes/normal_font_size = 20
 bbcode_enabled = true
 text = "Selesai Peringkat 2"
 
-[node name="TextureRect" type="TextureRect" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer/Level2"]
+[node name="TextureRect" type="TextureRect" parent="MainPanel/ScrollContainer/VBoxContainer/Level/Level2"]
 layout_mode = 0
 offset_left = 281.0
 offset_top = 30.0
@@ -88,15 +88,15 @@ offset_right = 321.0
 offset_bottom = 70.0
 texture = ExtResource("2_x7vuu")
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="MainPanel/ScrollContainer/VBoxContainer"]
+[node name="Level2" type="HBoxContainer" parent="MainPanel/ScrollContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Level3" type="Panel" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer2"]
+[node name="Level3" type="Panel" parent="MainPanel/ScrollContainer/VBoxContainer/Level2"]
 custom_minimum_size = Vector2(350, 100)
 layout_mode = 2
 size_flags_horizontal = 0
 
-[node name="RichTextLabel" type="RichTextLabel" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer2/Level3"]
+[node name="RichTextLabel" type="RichTextLabel" parent="MainPanel/ScrollContainer/VBoxContainer/Level2/Level3"]
 layout_mode = 0
 offset_left = 16.0
 offset_top = 37.0
@@ -106,7 +106,7 @@ theme_override_font_sizes/normal_font_size = 20
 bbcode_enabled = true
 text = "Selesai Peringkat 3"
 
-[node name="TextureRect" type="TextureRect" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer2/Level3"]
+[node name="TextureRect" type="TextureRect" parent="MainPanel/ScrollContainer/VBoxContainer/Level2/Level3"]
 layout_mode = 0
 offset_left = 281.0
 offset_top = 30.0
@@ -114,12 +114,12 @@ offset_right = 321.0
 offset_bottom = 70.0
 texture = ExtResource("2_x7vuu")
 
-[node name="Level4" type="Panel" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer2"]
+[node name="Level4" type="Panel" parent="MainPanel/ScrollContainer/VBoxContainer/Level2"]
 custom_minimum_size = Vector2(350, 100)
 layout_mode = 2
 size_flags_horizontal = 8
 
-[node name="RichTextLabel" type="RichTextLabel" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer2/Level4"]
+[node name="RichTextLabel" type="RichTextLabel" parent="MainPanel/ScrollContainer/VBoxContainer/Level2/Level4"]
 layout_mode = 0
 offset_left = 16.0
 offset_top = 37.0
@@ -129,7 +129,7 @@ theme_override_font_sizes/normal_font_size = 20
 bbcode_enabled = true
 text = "Selesai Peringkat 4"
 
-[node name="TextureRect" type="TextureRect" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer2/Level4"]
+[node name="TextureRect" type="TextureRect" parent="MainPanel/ScrollContainer/VBoxContainer/Level2/Level4"]
 layout_mode = 0
 offset_left = 281.0
 offset_top = 30.0
@@ -137,15 +137,15 @@ offset_right = 321.0
 offset_bottom = 70.0
 texture = ExtResource("2_x7vuu")
 
-[node name="HBoxContainer3" type="HBoxContainer" parent="MainPanel/ScrollContainer/VBoxContainer"]
+[node name="Level3" type="HBoxContainer" parent="MainPanel/ScrollContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Level5" type="Panel" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer3"]
+[node name="Level5" type="Panel" parent="MainPanel/ScrollContainer/VBoxContainer/Level3"]
 custom_minimum_size = Vector2(350, 100)
 layout_mode = 2
 size_flags_horizontal = 0
 
-[node name="RichTextLabel" type="RichTextLabel" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer3/Level5"]
+[node name="RichTextLabel" type="RichTextLabel" parent="MainPanel/ScrollContainer/VBoxContainer/Level3/Level5"]
 layout_mode = 0
 offset_left = 16.0
 offset_top = 37.0
@@ -155,7 +155,7 @@ theme_override_font_sizes/normal_font_size = 20
 bbcode_enabled = true
 text = "Selesai Peringkat 5"
 
-[node name="TextureRect" type="TextureRect" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer3/Level5"]
+[node name="TextureRect" type="TextureRect" parent="MainPanel/ScrollContainer/VBoxContainer/Level3/Level5"]
 layout_mode = 0
 offset_left = 281.0
 offset_top = 30.0
@@ -163,12 +163,12 @@ offset_right = 321.0
 offset_bottom = 70.0
 texture = ExtResource("2_x7vuu")
 
-[node name="Level6" type="Panel" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer3"]
+[node name="Level6" type="Panel" parent="MainPanel/ScrollContainer/VBoxContainer/Level3"]
 custom_minimum_size = Vector2(350, 100)
 layout_mode = 2
 size_flags_horizontal = 8
 
-[node name="RichTextLabel" type="RichTextLabel" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer3/Level6"]
+[node name="RichTextLabel" type="RichTextLabel" parent="MainPanel/ScrollContainer/VBoxContainer/Level3/Level6"]
 layout_mode = 0
 offset_left = 16.0
 offset_top = 37.0
@@ -178,7 +178,7 @@ theme_override_font_sizes/normal_font_size = 20
 bbcode_enabled = true
 text = "Selesai Peringkat 6"
 
-[node name="TextureRect" type="TextureRect" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer3/Level6"]
+[node name="TextureRect" type="TextureRect" parent="MainPanel/ScrollContainer/VBoxContainer/Level3/Level6"]
 layout_mode = 0
 offset_left = 281.0
 offset_top = 30.0
@@ -186,25 +186,25 @@ offset_right = 321.0
 offset_bottom = 70.0
 texture = ExtResource("2_x7vuu")
 
-[node name="HBoxContainer4" type="HBoxContainer" parent="MainPanel/ScrollContainer/VBoxContainer"]
+[node name="Quiz4" type="HBoxContainer" parent="MainPanel/ScrollContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Panel" type="Panel" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer4"]
+[node name="Quiz1" type="Panel" parent="MainPanel/ScrollContainer/VBoxContainer/Quiz4"]
 custom_minimum_size = Vector2(350, 100)
 layout_mode = 2
 size_flags_horizontal = 0
 
-[node name="RichTextLabel" type="RichTextLabel" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer4/Panel"]
+[node name="RichTextLabel" type="RichTextLabel" parent="MainPanel/ScrollContainer/VBoxContainer/Quiz4/Quiz1"]
 layout_mode = 0
 offset_left = 16.0
 offset_top = 37.0
 offset_right = 274.0
-offset_bottom = 59.0
+offset_bottom = 82.0
 theme_override_font_sizes/normal_font_size = 20
 bbcode_enabled = true
-text = "placeholder"
+text = "Jawab Semua Kuiz Peringkat 1 Dengan Betul"
 
-[node name="TextureRect" type="TextureRect" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer4/Panel"]
+[node name="TextureRect" type="TextureRect" parent="MainPanel/ScrollContainer/VBoxContainer/Quiz4/Quiz1"]
 layout_mode = 0
 offset_left = 281.0
 offset_top = 30.0
@@ -212,22 +212,22 @@ offset_right = 321.0
 offset_bottom = 70.0
 texture = ExtResource("2_x7vuu")
 
-[node name="Panel2" type="Panel" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer4"]
+[node name="Quiz2" type="Panel" parent="MainPanel/ScrollContainer/VBoxContainer/Quiz4"]
 custom_minimum_size = Vector2(350, 100)
 layout_mode = 2
 size_flags_horizontal = 8
 
-[node name="RichTextLabel" type="RichTextLabel" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer4/Panel2"]
+[node name="RichTextLabel" type="RichTextLabel" parent="MainPanel/ScrollContainer/VBoxContainer/Quiz4/Quiz2"]
 layout_mode = 0
 offset_left = 16.0
 offset_top = 37.0
 offset_right = 274.0
-offset_bottom = 59.0
+offset_bottom = 82.0
 theme_override_font_sizes/normal_font_size = 20
 bbcode_enabled = true
-text = "placeholder"
+text = "Jawab Semua Kuiz Peringkat 2 Dengan Betul"
 
-[node name="TextureRect" type="TextureRect" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer4/Panel2"]
+[node name="TextureRect" type="TextureRect" parent="MainPanel/ScrollContainer/VBoxContainer/Quiz4/Quiz2"]
 layout_mode = 0
 offset_left = 281.0
 offset_top = 30.0
@@ -235,25 +235,25 @@ offset_right = 321.0
 offset_bottom = 70.0
 texture = ExtResource("2_x7vuu")
 
-[node name="HBoxContainer5" type="HBoxContainer" parent="MainPanel/ScrollContainer/VBoxContainer"]
+[node name="Quiz5" type="HBoxContainer" parent="MainPanel/ScrollContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Panel" type="Panel" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer5"]
+[node name="Quiz3" type="Panel" parent="MainPanel/ScrollContainer/VBoxContainer/Quiz5"]
 custom_minimum_size = Vector2(350, 100)
 layout_mode = 2
 size_flags_horizontal = 0
 
-[node name="RichTextLabel" type="RichTextLabel" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer5/Panel"]
+[node name="RichTextLabel" type="RichTextLabel" parent="MainPanel/ScrollContainer/VBoxContainer/Quiz5/Quiz3"]
 layout_mode = 0
 offset_left = 16.0
 offset_top = 37.0
 offset_right = 274.0
-offset_bottom = 59.0
+offset_bottom = 82.0
 theme_override_font_sizes/normal_font_size = 20
 bbcode_enabled = true
-text = "placeholder"
+text = "Jawab Semua Kuiz Peringkat 3 Dengan Betul"
 
-[node name="TextureRect" type="TextureRect" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer5/Panel"]
+[node name="TextureRect" type="TextureRect" parent="MainPanel/ScrollContainer/VBoxContainer/Quiz5/Quiz3"]
 layout_mode = 0
 offset_left = 281.0
 offset_top = 30.0
@@ -261,22 +261,218 @@ offset_right = 321.0
 offset_bottom = 70.0
 texture = ExtResource("2_x7vuu")
 
-[node name="Panel2" type="Panel" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer5"]
+[node name="Quiz4" type="Panel" parent="MainPanel/ScrollContainer/VBoxContainer/Quiz5"]
 custom_minimum_size = Vector2(350, 100)
 layout_mode = 2
 size_flags_horizontal = 8
 
-[node name="RichTextLabel" type="RichTextLabel" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer5/Panel2"]
+[node name="RichTextLabel" type="RichTextLabel" parent="MainPanel/ScrollContainer/VBoxContainer/Quiz5/Quiz4"]
 layout_mode = 0
 offset_left = 16.0
 offset_top = 37.0
 offset_right = 274.0
-offset_bottom = 59.0
+offset_bottom = 82.0
 theme_override_font_sizes/normal_font_size = 20
 bbcode_enabled = true
-text = "placeholder"
+text = "Jawab Semua Kuiz Peringkat 4 Dengan Betul"
 
-[node name="TextureRect" type="TextureRect" parent="MainPanel/ScrollContainer/VBoxContainer/HBoxContainer5/Panel2"]
+[node name="TextureRect" type="TextureRect" parent="MainPanel/ScrollContainer/VBoxContainer/Quiz5/Quiz4"]
+layout_mode = 0
+offset_left = 281.0
+offset_top = 30.0
+offset_right = 321.0
+offset_bottom = 70.0
+texture = ExtResource("2_x7vuu")
+
+[node name="Quiz6" type="HBoxContainer" parent="MainPanel/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Quiz5" type="Panel" parent="MainPanel/ScrollContainer/VBoxContainer/Quiz6"]
+custom_minimum_size = Vector2(350, 100)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MainPanel/ScrollContainer/VBoxContainer/Quiz6/Quiz5"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 37.0
+offset_right = 274.0
+offset_bottom = 82.0
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "Jawab Semua Kuiz Peringkat 5 Dengan Betul"
+
+[node name="TextureRect" type="TextureRect" parent="MainPanel/ScrollContainer/VBoxContainer/Quiz6/Quiz5"]
+layout_mode = 0
+offset_left = 281.0
+offset_top = 30.0
+offset_right = 321.0
+offset_bottom = 70.0
+texture = ExtResource("2_x7vuu")
+
+[node name="Quiz6" type="Panel" parent="MainPanel/ScrollContainer/VBoxContainer/Quiz6"]
+custom_minimum_size = Vector2(350, 100)
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MainPanel/ScrollContainer/VBoxContainer/Quiz6/Quiz6"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 37.0
+offset_right = 274.0
+offset_bottom = 82.0
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "Jawab Semua Kuiz Peringkat 6 Dengan Betul"
+
+[node name="TextureRect" type="TextureRect" parent="MainPanel/ScrollContainer/VBoxContainer/Quiz6/Quiz6"]
+layout_mode = 0
+offset_left = 281.0
+offset_top = 30.0
+offset_right = 321.0
+offset_bottom = 70.0
+texture = ExtResource("2_x7vuu")
+
+[node name="Coin7" type="HBoxContainer" parent="MainPanel/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Coin1" type="Panel" parent="MainPanel/ScrollContainer/VBoxContainer/Coin7"]
+custom_minimum_size = Vector2(350, 100)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MainPanel/ScrollContainer/VBoxContainer/Coin7/Coin1"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 37.0
+offset_right = 274.0
+offset_bottom = 82.0
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "Kumpul Semua Syiling di Peringkat 1"
+
+[node name="TextureRect" type="TextureRect" parent="MainPanel/ScrollContainer/VBoxContainer/Coin7/Coin1"]
+layout_mode = 0
+offset_left = 281.0
+offset_top = 30.0
+offset_right = 321.0
+offset_bottom = 70.0
+texture = ExtResource("2_x7vuu")
+
+[node name="Coin2" type="Panel" parent="MainPanel/ScrollContainer/VBoxContainer/Coin7"]
+custom_minimum_size = Vector2(350, 100)
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MainPanel/ScrollContainer/VBoxContainer/Coin7/Coin2"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 37.0
+offset_right = 274.0
+offset_bottom = 82.0
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "Kumpul Semua Syiling di Peringkat 2"
+
+[node name="TextureRect" type="TextureRect" parent="MainPanel/ScrollContainer/VBoxContainer/Coin7/Coin2"]
+layout_mode = 0
+offset_left = 281.0
+offset_top = 30.0
+offset_right = 321.0
+offset_bottom = 70.0
+texture = ExtResource("2_x7vuu")
+
+[node name="Coin8" type="HBoxContainer" parent="MainPanel/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Coin3" type="Panel" parent="MainPanel/ScrollContainer/VBoxContainer/Coin8"]
+custom_minimum_size = Vector2(350, 100)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MainPanel/ScrollContainer/VBoxContainer/Coin8/Coin3"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 37.0
+offset_right = 274.0
+offset_bottom = 82.0
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "Kumpul Semua Syiling di Peringkat 3"
+
+[node name="TextureRect" type="TextureRect" parent="MainPanel/ScrollContainer/VBoxContainer/Coin8/Coin3"]
+layout_mode = 0
+offset_left = 281.0
+offset_top = 30.0
+offset_right = 321.0
+offset_bottom = 70.0
+texture = ExtResource("2_x7vuu")
+
+[node name="Coin4" type="Panel" parent="MainPanel/ScrollContainer/VBoxContainer/Coin8"]
+custom_minimum_size = Vector2(350, 100)
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MainPanel/ScrollContainer/VBoxContainer/Coin8/Coin4"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 37.0
+offset_right = 274.0
+offset_bottom = 82.0
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "Kumpul Semua Syiling di Peringkat 4"
+
+[node name="TextureRect" type="TextureRect" parent="MainPanel/ScrollContainer/VBoxContainer/Coin8/Coin4"]
+layout_mode = 0
+offset_left = 281.0
+offset_top = 30.0
+offset_right = 321.0
+offset_bottom = 70.0
+texture = ExtResource("2_x7vuu")
+
+[node name="Coin9" type="HBoxContainer" parent="MainPanel/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Coin5" type="Panel" parent="MainPanel/ScrollContainer/VBoxContainer/Coin9"]
+custom_minimum_size = Vector2(350, 100)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MainPanel/ScrollContainer/VBoxContainer/Coin9/Coin5"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 37.0
+offset_right = 274.0
+offset_bottom = 82.0
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "Kumpul Semua Syiling di Peringkat 5"
+
+[node name="TextureRect" type="TextureRect" parent="MainPanel/ScrollContainer/VBoxContainer/Coin9/Coin5"]
+layout_mode = 0
+offset_left = 281.0
+offset_top = 30.0
+offset_right = 321.0
+offset_bottom = 70.0
+texture = ExtResource("2_x7vuu")
+
+[node name="Coin6" type="Panel" parent="MainPanel/ScrollContainer/VBoxContainer/Coin9"]
+custom_minimum_size = Vector2(350, 100)
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MainPanel/ScrollContainer/VBoxContainer/Coin9/Coin6"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 37.0
+offset_right = 274.0
+offset_bottom = 82.0
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "Kumpul Semua Syiling di Peringkat 6"
+
+[node name="TextureRect" type="TextureRect" parent="MainPanel/ScrollContainer/VBoxContainer/Coin9/Coin6"]
 layout_mode = 0
 offset_left = 281.0
 offset_top = 30.0

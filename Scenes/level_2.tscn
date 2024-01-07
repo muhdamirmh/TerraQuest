@@ -32,7 +32,6 @@
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hioxc"]
 texture = ExtResource("1_0a1yu")
-use_texture_padding = false
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -259,7 +258,6 @@ sources/1 = SubResource("TileSetAtlasSource_hioxc")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_geypr"]
 texture = ExtResource("2_kgkh3")
-use_texture_padding = false
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -286,7 +284,6 @@ sources/1 = SubResource("TileSetAtlasSource_geypr")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kj8px"]
 texture = ExtResource("3_kjg2f")
-use_texture_padding = false
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -313,7 +310,6 @@ sources/0 = SubResource("TileSetAtlasSource_kj8px")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s285u"]
 texture = ExtResource("4_p7grx")
-use_texture_padding = false
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -350,7 +346,6 @@ sources/0 = SubResource("TileSetAtlasSource_s285u")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7inix"]
 texture = ExtResource("5_yd3wu")
-use_texture_padding = false
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -380,7 +375,6 @@ sources/0 = SubResource("TileSetAtlasSource_7inix")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xlbxk"]
 texture = ExtResource("6_iitlv")
-use_texture_padding = false
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -432,7 +426,6 @@ sources/0 = SubResource("TileSetAtlasSource_xlbxk")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eacal"]
 texture = ExtResource("7_2fefq")
-use_texture_padding = false
 1:0/0 = 0
 1:0/0/texture_origin = Vector2i(0, -2)
 2:0/0 = 0
@@ -653,7 +646,6 @@ sources/2 = SubResource("TileSetAtlasSource_vlwfx")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wba6p"]
 texture = ExtResource("10_ggvbq")
-use_texture_padding = false
 0:0/next_alternative_id = 2
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)

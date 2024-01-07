@@ -7,7 +7,7 @@ func _ready():
 	import_resources_data()
 
 func _physics_process(delta):
-	for n in 5:
+	for n in 6:
 		if Global.donelvl[n] == n + 1:
 			var button = get_tree().get_nodes_in_group("Level" + str(n+1))
 			for buttons in button:
@@ -25,8 +25,6 @@ func import_resources_data():
 
 	file.close()
 
-	print(example_dict)
-	print(example_dict[0][0])
 
 	
 func _on_back_pressed():
