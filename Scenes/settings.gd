@@ -48,10 +48,6 @@ func _on_sfx_button_pressed():
 	
 
 
-#func _on_joystick_button_toggled(button_pressed):
-#	Global.joystickenab = not Global.joystickenab
-#	MusicController.playsfxbutton()
-
 
 func _on_back_pressed():
 	get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")
@@ -60,3 +56,4 @@ func _on_back_pressed():
 
 func _on_control_pressed():
 	$Panel/Control/Instruct.show()
+	MusicController.playsfxbutton()

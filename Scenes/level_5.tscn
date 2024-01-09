@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=3 uid="uid://ccpk7hugjdg4d"]
+[gd_scene load_steps=63 format=3 uid="uid://ccpk7hugjdg4d"]
 
 [ext_resource type="Script" path="res://Scenes/level_5.gd" id="1_2xcif"]
 [ext_resource type="Texture2D" uid="uid://ciekg3lk3e0pn" path="res://Assets/World/Level 5/underwater-fantasy-files/underwater-fantasy-files/PNG/layers/far.png" id="2_gw4ur"]
@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://cvbwpci6kmy11" path="res://Scenes/actionable.tscn" id="16_o6h35"]
 [ext_resource type="Resource" uid="uid://b8iijqmyi2fvi" path="res://Dialog/Level5.dialogue" id="17_5sffj"]
 [ext_resource type="Texture2D" uid="uid://cny0tf276m33l" path="res://Assets/Characters/NPC/Jellyfish Sprite Sheet.png" id="18_2vjun"]
+[ext_resource type="Texture2D" uid="uid://dv1yc22nwcgq5" path="res://Assets/UI/Emotes6.png" id="18_b1exg"]
 [ext_resource type="Texture2D" uid="uid://bolunt2cusoh7" path="res://Assets/Characters/NPC/TimeFantasyAnimals2/TimeFantasyAnimals2/1x/ray.png" id="19_g1vx5"]
 [ext_resource type="Texture2D" uid="uid://d4n3pe5jjy7o0" path="res://Assets/Characters/NPC/TimeFantasyAnimals2/TimeFantasyAnimals2/1x/shark_full_blue_1.png" id="20_2dh0k"]
 [ext_resource type="PackedScene" uid="uid://bfr63y4o401l4" path="res://Scenes/quiz.tscn" id="21_bw12r"]
@@ -3528,6 +3529,15 @@ dialogue_start = "crab"
 [node name="ActionCollision2" type="CollisionShape2D" parent="Animals/Crab/Actionable"]
 shape = SubResource("RectangleShape2D_1m2fa")
 
+[node name="TextureRect" type="TextureRect" parent="Animals/Crab"]
+offset_left = -8.0
+offset_top = -34.0
+offset_right = 9.0
+offset_bottom = -17.0
+texture = ExtResource("18_b1exg")
+expand_mode = 1
+stretch_mode = 5
+
 [node name="Jellyfish" type="CharacterBody2D" parent="Animals"]
 position = Vector2(156, 182)
 
@@ -3558,6 +3568,15 @@ dialogue_start = "jellyfish"
 [node name="ActionCollision2" type="CollisionShape2D" parent="Animals/Jellyfish/Actionable"]
 shape = SubResource("RectangleShape2D_1m2fa")
 
+[node name="TextureRect" type="TextureRect" parent="Animals/Jellyfish"]
+offset_left = -8.0
+offset_top = -34.0
+offset_right = 9.0
+offset_bottom = -17.0
+texture = ExtResource("18_b1exg")
+expand_mode = 1
+stretch_mode = 5
+
 [node name="Stingray" type="CharacterBody2D" parent="Animals"]
 position = Vector2(676, 487)
 
@@ -3586,6 +3605,15 @@ dialogue_start = "stingray"
 
 [node name="ActionCollision2" type="CollisionShape2D" parent="Animals/Stingray/Actionable"]
 shape = SubResource("RectangleShape2D_1m2fa")
+
+[node name="TextureRect" type="TextureRect" parent="Animals/Stingray"]
+offset_left = -8.0
+offset_top = -34.0
+offset_right = 9.0
+offset_bottom = -17.0
+texture = ExtResource("18_b1exg")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="Shark" type="CharacterBody2D" parent="Animals"]
 position = Vector2(121, 446)
@@ -3616,6 +3644,15 @@ dialogue_start = "shark"
 [node name="ActionCollision2" type="CollisionShape2D" parent="Animals/Shark/Actionable"]
 position = Vector2(0.5, 0)
 shape = SubResource("RectangleShape2D_82uym")
+
+[node name="TextureRect" type="TextureRect" parent="Animals/Shark"]
+offset_left = -8.0
+offset_top = -34.0
+offset_right = 9.0
+offset_bottom = -17.0
+texture = ExtResource("18_b1exg")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="Quiz" parent="." instance=ExtResource("21_bw12r")]
 position = Vector2(477, 445)
@@ -3655,19 +3692,27 @@ offset_bottom = 238.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Instruct"]
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Instruct/Panel"]
 layout_mode = 0
-offset_left = -376.0
-offset_top = -209.0
-offset_right = 363.0
-offset_bottom = 224.0
+offset_left = 20.0
+offset_top = 62.0
+offset_right = 759.0
+offset_bottom = 450.0
 theme_override_font_sizes/normal_font_size = 30
 bbcode_enabled = true
-text = "Berhati-hati dengan [img]res://Assets/Characters/Enemy/free_crusher_enemy/free_crusher_enemy/style_A/PNG/idle/enemycrusher.png[/img], ini adalah halangan terbaru yang boleh menghancurkan anda!
+text = "[center]Berhati-hati dengan [img]res://Assets/Characters/Enemy/free_crusher_enemy/free_crusher_enemy/style_A/PNG/idle/enemycrusher.png[/img], ini adalah halangan terbaru yang boleh menghancurkan anda!
 
 Elakkan perangkap, kumpulkan syiling, dapatkan pengetahuan dari haiwan dan jawab [rainbow freq=0.5 sat=0.5 val=0.8]Kuiz Bintang[/rainbow]!!
 
-Selamat bermain!"
+Selamat bermain![/center]"
+
+[node name="CloseButton" type="Button" parent="CanvasLayer/Instruct/Panel"]
+layout_mode = 0
+offset_left = 713.0
+offset_top = 11.0
+offset_right = 763.0
+offset_bottom = 51.0
+text = "Tutup"
 
 [node name="PauseButton" type="Button" parent="CanvasLayer"]
 custom_minimum_size = Vector2(50, 50)
@@ -3678,5 +3723,16 @@ offset_bottom = 56.0
 theme = ExtResource("24_tqx1s")
 text = "Pause"
 
+[node name="RestartButton" type="Button" parent="CanvasLayer"]
+custom_minimum_size = Vector2(50, 50)
+offset_left = 1030.0
+offset_top = 6.0
+offset_right = 1080.0
+offset_bottom = 56.0
+theme = ExtResource("24_tqx1s")
+text = "Restart"
+
 [connection signal="body_entered" from="Obstacles/Traps/1" to="Obstacles/Traps/1" method="_on_body_entered" flags=18]
+[connection signal="pressed" from="CanvasLayer/Instruct/Panel/CloseButton" to="CanvasLayer/Instruct" method="_on_close_button_pressed" flags=18]
 [connection signal="pressed" from="CanvasLayer/PauseButton" to="." method="_on_pause_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/RestartButton" to="." method="_on_restart_button_pressed"]

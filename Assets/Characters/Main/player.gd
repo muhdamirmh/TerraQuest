@@ -151,11 +151,10 @@ func _on_hitbox_area_entered(area):
 
 	elif area.is_in_group("powerWall"):
 		powerWall = true
-		area.queue_free()
 
 	elif area is Coins:
 		addcoins(1)
-		area.queue_free()
+		
 
 	elif area.is_in_group("Animals"):
 		animalsrange = true

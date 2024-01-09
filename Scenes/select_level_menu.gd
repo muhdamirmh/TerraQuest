@@ -1,6 +1,12 @@
 extends Node2D
 
-@onready var level = [$Button/Level2,$Button/Level3,$Button/Level4,$Button/Level5,$Button/Level6]
+@onready var level = [
+	$Button/Panel2/PanelContainer/Level2,
+	$Button/Panel3/PanelContainer/Level3,
+	$Button/Panel4/PanelContainer/Level4,
+	$Button/Panel5/PanelContainer/Level5,
+	$Button/Panel6/PanelContainer/Level6
+	]
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

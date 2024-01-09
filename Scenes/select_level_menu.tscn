@@ -1,65 +1,299 @@
-[gd_scene load_steps=3 format=3 uid="uid://br16ai43wawft"]
+[gd_scene load_steps=9 format=3 uid="uid://br16ai43wawft"]
 
 [ext_resource type="Script" path="res://Scenes/select_level_menu.gd" id="1_lesxs"]
 [ext_resource type="Theme" uid="uid://ir4rfq0nqkt0" path="res://Assets/UI/UITheme.tres" id="2_dqnfy"]
+[ext_resource type="Texture2D" uid="uid://bgydh8w0l6xb5" path="res://Assets/World/Background/1.png" id="3_7sy6l"]
+[ext_resource type="Texture2D" uid="uid://cabsxvflu5bfh" path="res://Assets/World/Background/2.png" id="4_1mck3"]
+[ext_resource type="Texture2D" uid="uid://bqvvah0b78u6h" path="res://Assets/World/Background/3.png" id="5_epev6"]
+[ext_resource type="Texture2D" uid="uid://bxrvdwcieh4oj" path="res://Assets/World/Background/4.png" id="6_f8h3j"]
+[ext_resource type="Texture2D" uid="uid://b3g4djj6hopqh" path="res://Assets/World/Background/5.png" id="7_mpmpv"]
+[ext_resource type="Texture2D" uid="uid://do3100c4sbxf6" path="res://Assets/World/Background/6.png" id="8_sqjxv"]
 
 [node name="SelectLevelMenu" type="Node2D"]
 script = ExtResource("1_lesxs")
 
 [node name="Button" type="Node2D" parent="."]
 
-[node name="Level1" type="Button" parent="Button"]
-offset_left = 273.0
-offset_top = 214.0
-offset_right = 413.0
-offset_bottom = 264.0
+[node name="Panel" type="Panel" parent="Button"]
+offset_left = 150.0
+offset_top = 161.0
+offset_right = 388.0
+offset_bottom = 304.0
+theme = ExtResource("2_dqnfy")
+
+[node name="Container" type="PanelContainer" parent="Button/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -115.5
+offset_top = -67.5
+offset_right = 115.5
+offset_bottom = 67.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Button/Panel/Container"]
+layout_mode = 2
+texture = ExtResource("3_7sy6l")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="PanelContainer" type="PanelContainer" parent="Button/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -69.0
+offset_top = -21.5
+offset_right = 71.0
+offset_bottom = 28.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Level1" type="Button" parent="Button/Panel/PanelContainer"]
+layout_mode = 2
 theme = ExtResource("2_dqnfy")
 theme_override_font_sizes/font_size = 25
 text = "Peringkat 1
 "
 
-[node name="Level2" type="Button" parent="Button"]
-offset_left = 498.0
-offset_top = 214.0
-offset_right = 638.0
-offset_bottom = 264.0
+[node name="Panel2" type="Panel" parent="Button"]
+offset_left = 450.0
+offset_top = 161.0
+offset_right = 688.0
+offset_bottom = 304.0
+theme = ExtResource("2_dqnfy")
+
+[node name="Container" type="PanelContainer" parent="Button/Panel2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -114.0
+offset_top = -65.5
+offset_right = 113.0
+offset_bottom = 65.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Button/Panel2/Container"]
+layout_mode = 2
+texture = ExtResource("4_1mck3")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="PanelContainer" type="PanelContainer" parent="Button/Panel2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -69.0
+offset_top = -21.5
+offset_right = 71.0
+offset_bottom = 28.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Level2" type="Button" parent="Button/Panel2/PanelContainer"]
+layout_mode = 2
 theme = ExtResource("2_dqnfy")
 theme_override_font_sizes/font_size = 25
 text = "Peringkat 2"
 
-[node name="Level3" type="Button" parent="Button"]
-offset_left = 723.0
-offset_top = 214.0
-offset_right = 863.0
-offset_bottom = 264.0
+[node name="Panel3" type="Panel" parent="Button"]
+offset_left = 750.0
+offset_top = 161.0
+offset_right = 988.0
+offset_bottom = 304.0
+theme = ExtResource("2_dqnfy")
+
+[node name="Container" type="PanelContainer" parent="Button/Panel3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -114.0
+offset_top = -65.5
+offset_right = 113.0
+offset_bottom = 65.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Button/Panel3/Container"]
+layout_mode = 2
+texture = ExtResource("5_epev6")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="PanelContainer" type="PanelContainer" parent="Button/Panel3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -69.0
+offset_top = -21.5
+offset_right = 71.0
+offset_bottom = 28.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Level3" type="Button" parent="Button/Panel3/PanelContainer"]
+layout_mode = 2
 theme = ExtResource("2_dqnfy")
 theme_override_font_sizes/font_size = 25
 text = "Peringkat 3"
 
-[node name="Level4" type="Button" parent="Button"]
-offset_left = 273.0
-offset_top = 334.0
-offset_right = 413.0
-offset_bottom = 384.0
+[node name="Panel4" type="Panel" parent="Button"]
+offset_left = 150.0
+offset_top = 350.0
+offset_right = 388.0
+offset_bottom = 493.0
+theme = ExtResource("2_dqnfy")
+
+[node name="Container" type="PanelContainer" parent="Button/Panel4"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -114.0
+offset_top = -67.5
+offset_right = 114.0
+offset_bottom = 67.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Button/Panel4/Container"]
+layout_mode = 2
+texture = ExtResource("6_f8h3j")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="PanelContainer" type="PanelContainer" parent="Button/Panel4"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -69.0
+offset_top = -21.5
+offset_right = 71.0
+offset_bottom = 28.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Level4" type="Button" parent="Button/Panel4/PanelContainer"]
+layout_mode = 2
 theme = ExtResource("2_dqnfy")
 theme_override_font_sizes/font_size = 25
 text = "Peringkat 4"
 
-[node name="Level5" type="Button" parent="Button"]
-offset_left = 498.0
-offset_top = 334.0
-offset_right = 638.0
-offset_bottom = 384.0
+[node name="Panel5" type="Panel" parent="Button"]
+offset_left = 450.0
+offset_top = 350.0
+offset_right = 688.0
+offset_bottom = 493.0
+theme = ExtResource("2_dqnfy")
+
+[node name="Container" type="PanelContainer" parent="Button/Panel5"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -114.0
+offset_top = -68.5
+offset_right = 113.0
+offset_bottom = 65.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Button/Panel5/Container"]
+layout_mode = 2
+texture = ExtResource("7_mpmpv")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="PanelContainer" type="PanelContainer" parent="Button/Panel5"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -69.0
+offset_top = -21.5
+offset_right = 71.0
+offset_bottom = 28.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Level5" type="Button" parent="Button/Panel5/PanelContainer"]
+layout_mode = 2
 theme = ExtResource("2_dqnfy")
 theme_override_font_sizes/font_size = 25
 text = "Peringkat 5
 "
 
-[node name="Level6" type="Button" parent="Button"]
-offset_left = 723.0
-offset_top = 334.0
-offset_right = 863.0
-offset_bottom = 384.0
+[node name="Panel6" type="Panel" parent="Button"]
+offset_left = 750.0
+offset_top = 350.0
+offset_right = 988.0
+offset_bottom = 493.0
+theme = ExtResource("2_dqnfy")
+
+[node name="Container" type="PanelContainer" parent="Button/Panel6"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -114.0
+offset_top = -68.5
+offset_right = 113.0
+offset_bottom = 65.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Button/Panel6/Container"]
+layout_mode = 2
+texture = ExtResource("8_sqjxv")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="PanelContainer" type="PanelContainer" parent="Button/Panel6"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -69.0
+offset_top = -21.5
+offset_right = 71.0
+offset_bottom = 28.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Level6" type="Button" parent="Button/Panel6/PanelContainer"]
+layout_mode = 2
 theme = ExtResource("2_dqnfy")
 theme_override_font_sizes/font_size = 25
 text = "Peringkat 6"
@@ -85,10 +319,10 @@ theme = ExtResource("2_dqnfy")
 theme_override_font_sizes/font_size = 30
 text = "Kembali"
 
-[connection signal="pressed" from="Button/Level1" to="." method="_on_level_1_pressed"]
-[connection signal="pressed" from="Button/Level2" to="." method="_on_level_2_pressed"]
-[connection signal="pressed" from="Button/Level3" to="." method="_on_level_3_pressed"]
-[connection signal="pressed" from="Button/Level4" to="." method="_on_level_4_pressed"]
-[connection signal="pressed" from="Button/Level5" to="." method="_on_level_5_pressed"]
-[connection signal="pressed" from="Button/Level6" to="." method="_on_level_6_pressed"]
+[connection signal="pressed" from="Button/Panel/PanelContainer/Level1" to="." method="_on_level_1_pressed"]
+[connection signal="pressed" from="Button/Panel2/PanelContainer/Level2" to="." method="_on_level_2_pressed"]
+[connection signal="pressed" from="Button/Panel3/PanelContainer/Level3" to="." method="_on_level_3_pressed"]
+[connection signal="pressed" from="Button/Panel4/PanelContainer/Level4" to="." method="_on_level_4_pressed"]
+[connection signal="pressed" from="Button/Panel5/PanelContainer/Level5" to="." method="_on_level_5_pressed"]
+[connection signal="pressed" from="Button/Panel6/PanelContainer/Level6" to="." method="_on_level_6_pressed"]
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]

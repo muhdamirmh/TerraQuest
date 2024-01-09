@@ -1,7 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://b3ppbrf2kis8l"]
+[gd_scene load_steps=12 format=3 uid="uid://b3ppbrf2kis8l"]
 
 [ext_resource type="Texture2D" uid="uid://6y0rxu46u3r2" path="res://Assets/Characters/NPC/MiniDeer1.png" id="1_kudbl"]
 [ext_resource type="PackedScene" uid="uid://cvbwpci6kmy11" path="res://Scenes/actionable.tscn" id="3_sggbg"]
+[ext_resource type="Texture2D" uid="uid://dv1yc22nwcgq5" path="res://Assets/UI/Emotes6.png" id="3_u262k"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xpoft"]
 atlas = ExtResource("1_kudbl")
@@ -73,3 +74,12 @@ disabled = true
 
 [node name="ActionCollision2" type="CollisionShape2D" parent="Actionable"]
 shape = SubResource("RectangleShape2D_1m2fa")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -5.0
+offset_top = -29.0
+offset_right = 7.0
+offset_bottom = -17.0
+texture = ExtResource("3_u262k")
+expand_mode = 1
+stretch_mode = 5

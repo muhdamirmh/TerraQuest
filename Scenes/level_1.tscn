@@ -15,6 +15,7 @@
 [ext_resource type="Script" path="res://Scenes/power_jump.gd" id="10_sprye"]
 [ext_resource type="PackedScene" uid="uid://ccvn6jdmdku5x" path="res://Assets/World/coin.tscn" id="11_d8ael"]
 [ext_resource type="Resource" uid="uid://cckjuw3fl5ytm" path="res://Dialog/Level1.dialogue" id="14_13kw4"]
+[ext_resource type="Texture2D" uid="uid://dv1yc22nwcgq5" path="res://Assets/UI/Emotes6.png" id="14_pp3yu"]
 [ext_resource type="Texture2D" uid="uid://dbeebplfefhjy" path="res://Assets/Characters/NPC/MiniFox.png" id="16_k1qkn"]
 [ext_resource type="PackedScene" uid="uid://cvbwpci6kmy11" path="res://Scenes/actionable.tscn" id="16_vdcmg"]
 [ext_resource type="Texture2D" uid="uid://cqs5a5y77teld" path="res://Assets/Misc/coins-chests-etc-2-0.png" id="17_rxes0"]
@@ -901,8 +902,8 @@ sources/0 = SubResource("TileSetAtlasSource_fvgsy")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ootth"]
 size = Vector2(144.375, 8)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3hpcb"]
-size = Vector2(45.375, 8)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7jec2"]
+size = Vector2(127, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_atlij"]
 texture = ExtResource("4_olw16")
@@ -1244,9 +1245,6 @@ texture = ExtResource("4_olw16")
 
 [sub_resource type="TileSet" id="TileSet_h3x31"]
 sources/0 = SubResource("TileSetAtlasSource_atlij")
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7jec2"]
-size = Vector2(127, 8)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tr72j"]
 size = Vector2(79, 8)
@@ -4502,22 +4500,6 @@ tile_set = SubResource("TileSet_aexar")
 format = 2
 layer_0/tile_data = PackedInt32Array(-1, 1245184, 17, -65536, 1245184, 17, -65535, 1245184, 17, -65534, 1245184, 17, -65533, 1245184, 17, -65532, 1245184, 17, -65531, 1245184, 17, -65530, 1245184, 17, -65529, 1245184, 17)
 
-[node name="Traps2_6" type="Area2D" parent="Obstacles/Traps" groups=["Obstacles"]]
-position = Vector2(767, -57)
-rotation = 3.14159
-collision_layer = 2
-collision_mask = 3
-script = ExtResource("5_dowep")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacles/Traps/Traps2_6"]
-position = Vector2(57.6875, -4.00006)
-shape = SubResource("RectangleShape2D_3hpcb")
-
-[node name="TileMap" type="TileMap" parent="Obstacles/Traps/Traps2_6"]
-tile_set = SubResource("TileSet_h3x31")
-format = 2
-layer_0/tile_data = PackedInt32Array(-65534, 1179648, 17, -65533, 1245184, 17, -65532, 1245184, 17)
-
 [node name="Traps2_3" type="Area2D" parent="Obstacles/Traps" groups=["Obstacles"]]
 position = Vector2(566, 40)
 rotation = 1.5708
@@ -4703,6 +4685,15 @@ dialogue_start = "fox"
 [node name="ActionCollision" type="CollisionShape2D" parent="Animals/Fox/Actionable"]
 shape = SubResource("RectangleShape2D_lc6cm")
 
+[node name="TextureRect" type="TextureRect" parent="Animals/Fox"]
+offset_left = -8.0
+offset_top = -34.0
+offset_right = 9.0
+offset_bottom = -17.0
+texture = ExtResource("14_pp3yu")
+expand_mode = 1
+stretch_mode = 5
+
 [node name="Wolf" type="CharacterBody2D" parent="Animals"]
 position = Vector2(1127, 55)
 
@@ -4736,6 +4727,15 @@ dialogue_start = "wolf"
 [node name="ActionCollision" type="CollisionShape2D" parent="Animals/Wolf/Actionable"]
 shape = SubResource("RectangleShape2D_lc6cm")
 
+[node name="TextureRect" type="TextureRect" parent="Animals/Wolf"]
+offset_left = -8.0
+offset_top = -34.0
+offset_right = 9.0
+offset_bottom = -17.0
+texture = ExtResource("14_pp3yu")
+expand_mode = 1
+stretch_mode = 5
+
 [node name="Bear" type="CharacterBody2D" parent="Animals"]
 position = Vector2(34, 199)
 
@@ -4766,6 +4766,15 @@ dialogue_start = "bear"
 
 [node name="ActionCollision" type="CollisionShape2D" parent="Animals/Bear/Actionable"]
 shape = SubResource("RectangleShape2D_lc6cm")
+
+[node name="TextureRect" type="TextureRect" parent="Animals/Bear"]
+offset_left = -8.0
+offset_top = -34.0
+offset_right = 9.0
+offset_bottom = -17.0
+texture = ExtResource("14_pp3yu")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="Deer" type="CharacterBody2D" parent="Animals"]
 position = Vector2(135, 375)
@@ -4799,6 +4808,15 @@ dialogue_start = "deer"
 [node name="ActionCollision" type="CollisionShape2D" parent="Animals/Deer/Actionable"]
 shape = SubResource("RectangleShape2D_lc6cm")
 
+[node name="TextureRect" type="TextureRect" parent="Animals/Deer"]
+offset_left = -8.0
+offset_top = -34.0
+offset_right = 9.0
+offset_bottom = -17.0
+texture = ExtResource("14_pp3yu")
+expand_mode = 1
+stretch_mode = 5
+
 [node name="Quiz" type="Area2D" parent="." groups=["Quiz"]]
 position = Vector2(509, 37)
 
@@ -4817,34 +4835,34 @@ autoplay = "default"
 
 [node name="Coins" type="Node2D" parent="Items"]
 
-[node name="Coin" parent="Items/Coins" instance=ExtResource("11_d8ael")]
+[node name="1" parent="Items/Coins" instance=ExtResource("11_d8ael")]
 position = Vector2(378, 365)
 
-[node name="Coin2" parent="Items/Coins" instance=ExtResource("11_d8ael")]
+[node name="2" parent="Items/Coins" instance=ExtResource("11_d8ael")]
 position = Vector2(400, 544)
 
-[node name="Coin3" parent="Items/Coins" instance=ExtResource("11_d8ael")]
+[node name="3" parent="Items/Coins" instance=ExtResource("11_d8ael")]
 position = Vector2(743, 589)
 
-[node name="Coin4" parent="Items/Coins" instance=ExtResource("11_d8ael")]
+[node name="4" parent="Items/Coins" instance=ExtResource("11_d8ael")]
 position = Vector2(840, 353)
 
-[node name="Coin6" parent="Items/Coins" instance=ExtResource("11_d8ael")]
+[node name="6" parent="Items/Coins" instance=ExtResource("11_d8ael")]
 position = Vector2(859, 272)
 
-[node name="Coin7" parent="Items/Coins" instance=ExtResource("11_d8ael")]
+[node name="7" parent="Items/Coins" instance=ExtResource("11_d8ael")]
 position = Vector2(780, 134)
 
-[node name="Coin8" parent="Items/Coins" instance=ExtResource("11_d8ael")]
+[node name="8" parent="Items/Coins" instance=ExtResource("11_d8ael")]
 position = Vector2(824, 134)
 
-[node name="Coin10" parent="Items/Coins" instance=ExtResource("11_d8ael")]
+[node name="10" parent="Items/Coins" instance=ExtResource("11_d8ael")]
 position = Vector2(1041, 77)
 
-[node name="Coin9" parent="Items/Coins" instance=ExtResource("11_d8ael")]
+[node name="9" parent="Items/Coins" instance=ExtResource("11_d8ael")]
 position = Vector2(865, 134)
 
-[node name="Coin5" parent="Items/Coins" instance=ExtResource("11_d8ael")]
+[node name="5" parent="Items/Coins" instance=ExtResource("11_d8ael")]
 position = Vector2(1115, 446)
 
 [node name="Powerups" type="Node2D" parent="Items"]
@@ -4965,9 +4983,17 @@ offset_bottom = 56.0
 theme = ExtResource("26_sndxp")
 text = "Pause"
 
+[node name="RestartButton" type="Button" parent="CanvasLayer"]
+custom_minimum_size = Vector2(50, 50)
+offset_left = 1030.0
+offset_top = 6.0
+offset_right = 1080.0
+offset_bottom = 56.0
+theme = ExtResource("26_sndxp")
+text = "Restart"
+
 [connection signal="body_entered" from="Obstacles/Traps/Traps2_8" to="Obstacles/Traps/Traps2_8" method="_on_body_entered" flags=18]
 [connection signal="body_entered" from="Obstacles/Traps/Traps2_9" to="Obstacles/Traps/Traps2_9" method="_on_body_entered" flags=18]
-[connection signal="body_entered" from="Obstacles/Traps/Traps2_6" to="Obstacles/Traps/Traps2_6" method="_on_body_entered" flags=18]
 [connection signal="body_entered" from="Obstacles/Traps/Traps2_3" to="Obstacles/Traps/Traps2_3" method="_on_body_entered" flags=18]
 [connection signal="body_entered" from="Obstacles/Traps/Traps2_2" to="Obstacles/Traps/Traps2_2" method="_on_body_entered" flags=18]
 [connection signal="body_entered" from="Obstacles/Traps/Traps2_4" to="Obstacles/Traps/Traps2_4" method="_on_body_entered" flags=18]
@@ -4979,3 +5005,4 @@ text = "Pause"
 [connection signal="body_entered" from="Items/Powerups/powerJump2" to="Items/Powerups/powerJump2" method="_on_body_entered" flags=18]
 [connection signal="timeout" from="Items/Powerups/powerJump2/WaitTime" to="Items/Powerups/powerJump2" method="_on_timer_timeout" flags=18]
 [connection signal="pressed" from="CanvasLayer/PauseButton" to="." method="_on_pause_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/RestartButton" to="." method="_on_restart_button_pressed"]

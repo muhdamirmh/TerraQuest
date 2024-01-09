@@ -1,4 +1,4 @@
-[gd_scene load_steps=80 format=3 uid="uid://c05plgmmmqbhu"]
+[gd_scene load_steps=81 format=3 uid="uid://c05plgmmmqbhu"]
 
 [ext_resource type="Script" path="res://Scenes/level_3.gd" id="1_3vp2y"]
 [ext_resource type="Texture2D" uid="uid://qncnv7hv04j7" path="res://Assets/World/Level 3/BG_DesertMountains/background1.png" id="2_fss2v"]
@@ -27,6 +27,7 @@
 [ext_resource type="PackedScene" uid="uid://cvbwpci6kmy11" path="res://Scenes/actionable.tscn" id="25_clrwb"]
 [ext_resource type="Resource" uid="uid://bmauqf5aqh1hm" path="res://Dialog/Level3.dialogue" id="26_7djbw"]
 [ext_resource type="Texture2D" uid="uid://w7smffj7vicu" path="res://Assets/Characters/NPC/Vermin Free Asset Pack/Animations/Lethal Scorpion/LethalScorpionIdleSide.png" id="26_caaay"]
+[ext_resource type="Texture2D" uid="uid://dv1yc22nwcgq5" path="res://Assets/UI/Emotes6.png" id="26_vynfc"]
 [ext_resource type="Texture2D" uid="uid://drp1jgq42nm0" path="res://Assets/Characters/NPC/Tiny, Tiny Heroes - Animals/spritesheet.png" id="29_kdhrh"]
 [ext_resource type="Texture2D" uid="uid://ldsfkll0j5r5" path="res://Assets/Characters/NPC/Vermin Free Asset Pack/Animations/Tawny Spider/TawnySpiderIdleSide.png" id="30_sw61e"]
 [ext_resource type="PackedScene" uid="uid://bnjj4rdfcgq45" path="res://Scenes/pause_menu.tscn" id="31_3rjl0"]
@@ -1961,6 +1962,15 @@ dialogue_start = "camel"
 position = Vector2(2, 0)
 shape = SubResource("RectangleShape2D_b44p4")
 
+[node name="TextureRect" type="TextureRect" parent="Animals/Camel"]
+offset_left = -8.0
+offset_top = -34.0
+offset_right = 9.0
+offset_bottom = -17.0
+texture = ExtResource("26_vynfc")
+expand_mode = 1
+stretch_mode = 5
+
 [node name="Scorpion" type="CharacterBody2D" parent="Animals"]
 position = Vector2(1046, 182)
 
@@ -1990,6 +2000,15 @@ dialogue_start = "scorpion"
 
 [node name="ActionCollision2" type="CollisionShape2D" parent="Animals/Scorpion/Actionable"]
 shape = SubResource("RectangleShape2D_1m2fa")
+
+[node name="TextureRect" type="TextureRect" parent="Animals/Scorpion"]
+offset_left = -8.0
+offset_top = -34.0
+offset_right = 9.0
+offset_bottom = -17.0
+texture = ExtResource("26_vynfc")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="Snake" type="CharacterBody2D" parent="Animals"]
 position = Vector2(1115, 620)
@@ -2022,6 +2041,15 @@ dialogue_start = "snake"
 [node name="ActionCollision2" type="CollisionShape2D" parent="Animals/Snake/Actionable"]
 shape = SubResource("RectangleShape2D_am76l")
 
+[node name="TextureRect" type="TextureRect" parent="Animals/Snake"]
+offset_left = -8.0
+offset_top = -34.0
+offset_right = 9.0
+offset_bottom = -17.0
+texture = ExtResource("26_vynfc")
+expand_mode = 1
+stretch_mode = 5
+
 [node name="Spider" type="CharacterBody2D" parent="Animals"]
 position = Vector2(288, 621)
 
@@ -2050,6 +2078,15 @@ dialogue_start = "spider"
 
 [node name="ActionCollision2" type="CollisionShape2D" parent="Animals/Spider/Actionable"]
 shape = SubResource("RectangleShape2D_ptuwt")
+
+[node name="TextureRect" type="TextureRect" parent="Animals/Spider"]
+offset_left = -8.0
+offset_top = -34.0
+offset_right = 9.0
+offset_bottom = -17.0
+texture = ExtResource("26_vynfc")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="Quiz" parent="." instance=ExtResource("31_du0j4")]
 position = Vector2(289, 392)
@@ -2089,19 +2126,27 @@ offset_bottom = 238.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Instruct"]
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Instruct/Panel"]
 layout_mode = 0
-offset_left = -376.0
-offset_top = -209.0
-offset_right = 363.0
-offset_bottom = 224.0
+offset_left = 20.0
+offset_top = 62.0
+offset_right = 759.0
+offset_bottom = 450.0
 theme_override_font_sizes/normal_font_size = 30
 bbcode_enabled = true
-text = "Jika anda dapat [img]res://Assets/Misc/Coin_Gems/greengems.png[/img], anda akan beralih tempat secara cepat tu suatu tempat lain!
+text = "[center]Jika anda dapat [img]res://Assets/Misc/Coin_Gems/greengems.png[/img], anda akan beralih tempat secara cepat tu suatu tempat lain!
 
 Elakkan perangkap, kumpulkan syiling, dapatkan pengetahuan dari haiwan dan jawab [rainbow freq=0.5 sat=0.5 val=0.8]Kuiz Bintang[/rainbow]!!
 
-Selamat bermain!"
+Selamat bermain![/center]"
+
+[node name="CloseButton" type="Button" parent="CanvasLayer/Instruct/Panel"]
+layout_mode = 0
+offset_left = 713.0
+offset_top = 11.0
+offset_right = 763.0
+offset_bottom = 51.0
+text = "Tutup"
 
 [node name="PauseButton" type="Button" parent="CanvasLayer"]
 custom_minimum_size = Vector2(50, 50)
@@ -2111,6 +2156,15 @@ offset_right = 1146.0
 offset_bottom = 56.0
 theme = ExtResource("32_bdv1s")
 text = "Pause"
+
+[node name="RestartButton" type="Button" parent="CanvasLayer"]
+custom_minimum_size = Vector2(50, 50)
+offset_left = 1030.0
+offset_top = 6.0
+offset_right = 1080.0
+offset_bottom = 56.0
+theme = ExtResource("32_bdv1s")
+text = "Restart"
 
 [connection signal="body_entered" from="Obstacles/Traps/1" to="Obstacles/Traps/1" method="_on_body_entered" flags=18]
 [connection signal="body_entered" from="Obstacles/Traps/3" to="Obstacles/Traps/3" method="_on_body_entered" flags=18]
@@ -2126,4 +2180,6 @@ text = "Pause"
 [connection signal="body_entered" from="Obstacles/Traps/13" to="Obstacles/Traps/13" method="_on_body_entered" flags=18]
 [connection signal="body_entered" from="Obstacles/Traps/2" to="Obstacles/Traps/2" method="_on_body_entered" flags=18]
 [connection signal="child_entered_tree" from="Animals/Camel" to="Animals/Camel" method="_on_child_entered_tree" flags=18]
+[connection signal="pressed" from="CanvasLayer/Instruct/Panel/CloseButton" to="CanvasLayer/Instruct" method="_on_close_button_pressed" flags=18]
 [connection signal="pressed" from="CanvasLayer/PauseButton" to="." method="_on_pause_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/RestartButton" to="." method="_on_restart_button_pressed"]

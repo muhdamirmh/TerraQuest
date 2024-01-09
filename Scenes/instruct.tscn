@@ -29,27 +29,27 @@ offset_bottom = 238.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel"]
 layout_mode = 0
-offset_left = -376.0
-offset_top = -209.0
-offset_right = 363.0
-offset_bottom = 224.0
+offset_left = 20.0
+offset_top = 62.0
+offset_right = 759.0
+offset_bottom = 450.0
 theme_override_font_sizes/normal_font_size = 30
 bbcode_enabled = true
-text = "[img]res://Assets/UI/Keyboards/image_1-3.png[/img] atau 2 kali [img]res://Assets/UI/MOUSEBUTTONLEFT.png[/img] untuk mula atau sambung dialog dengan haiwan
+text = "[center][img]res://Assets/UI/Keyboards/image_1-3.png[/img] atau 2 kali [img]res://Assets/UI/MOUSEBUTTONLEFT.png[/img]: Mula atau sambung dialog dengan haiwan/kuiz
 
-[img]res://Assets/UI/Keyboards/image_91.png[/img] untuk bergerak ke kiri
+[img]res://Assets/UI/Keyboards/image_91.png[/img]: Kiri
 
-[img]res://Assets/UI/Keyboards/image_88.png[/img] untuk bergerak ke kanan
+[img]res://Assets/UI/Keyboards/image_88.png[/img]: Kanan
 
 Apabila anda berada di atas kayu seperti ini [img]res://Assets/World/Level 1/1wayplatform.png[/img], tekan [img]res://Assets/UI/Keyboards/image_73.png[/img] untuk kebawah
 
-[img]res://Assets/UI/Keyboards/image_2-2.png[/img] untuk lompat
+[img]res://Assets/UI/Keyboards/image_2-2.png[/img]: Lompat
 
-[img]res://Assets/UI/Keyboards/image_87.png[/img] untuk berinteraksi dengan objek
+[img]res://Assets/UI/Keyboards/image_87.png[/img]: Berinteraksi dengan objek
 
-[img]res://Assets/UI/Keyboards/image_74.png[/img] untuk mula semula peringkat anda
+[img]res://Assets/UI/Keyboards/image_74.png[/img]: Mula semula peringkat anda
 
 
 Anda akan kehilangan satu hati di sudut kiri atas jika mengenai perangkap dan musuh.
@@ -62,4 +62,14 @@ Jika anda dapat [img]res://Assets/Misc/Coin_Gems/redgems.png[/img], anda boleh m
 
 Elakkan perangkap, kumpulkan syiling, dapatkan pengetahuan dari haiwan dan jawab [rainbow freq=0.5 sat=0.5 val=0.8]Kuiz Bintang[/rainbow]!!
 
-Selamat bermain!"
+Selamat bermain![/center]"
+
+[node name="CloseButton" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 713.0
+offset_top = 11.0
+offset_right = 763.0
+offset_bottom = 51.0
+text = "Tutup"
+
+[connection signal="pressed" from="Panel/CloseButton" to="." method="_on_close_button_pressed"]

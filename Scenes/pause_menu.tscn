@@ -144,27 +144,37 @@ grow_vertical = 2
 [node name="RichTextLabel" type="RichTextLabel" parent="Panel/Instruct"]
 layout_mode = 0
 offset_left = -376.0
-offset_top = -209.0
+offset_top = -167.0
 offset_right = 363.0
 offset_bottom = 224.0
 theme_override_font_sizes/normal_font_size = 30
 bbcode_enabled = true
-text = "[img]res://Assets/UI/Keyboards/image_1-3.png[/img] atau 2 kali [img]res://Assets/UI/MOUSEBUTTONLEFT.png[/img] untuk mula atau sambung dialog dengan haiwan
+text = "[center]2 kali [img]res://Assets/UI/MOUSEBUTTONLEFT.png[/img]: Tutup ini
 
-[img]res://Assets/UI/Keyboards/image_91.png[/img] untuk bergerak ke kiri
+[img]res://Assets/UI/Keyboards/image_1-3.png[/img] atau 2 kali [img]res://Assets/UI/MOUSEBUTTONLEFT.png[/img]: Mula atau sambung dialog dengan haiwan/kuiz
 
-[img]res://Assets/UI/Keyboards/image_88.png[/img] untuk bergerak ke kanan
+[img]res://Assets/UI/Keyboards/image_91.png[/img]: Kiri
+
+[img]res://Assets/UI/Keyboards/image_88.png[/img]: Kanan
 
 Apabila anda berada di atas kayu seperti ini [img]res://Assets/World/Level 1/1wayplatform.png[/img], tekan [img]res://Assets/UI/Keyboards/image_73.png[/img] untuk kebawah
 
-[img]res://Assets/UI/Keyboards/image_2-2.png[/img] untuk lompat
+[img]res://Assets/UI/Keyboards/image_2-2.png[/img]: Lompat
 
-[img]res://Assets/UI/Keyboards/image_87.png[/img] untuk berinteraksi dengan objek
+[img]res://Assets/UI/Keyboards/image_87.png[/img]: Berinteraksi dengan objek
 
-[img]res://Assets/UI/Keyboards/image_74.png[/img] untuk mula semula peringkat anda"
+[img]res://Assets/UI/Keyboards/image_74.png[/img]: Mula semula peringkat anda[/center]"
+
+[node name="Close" type="Button" parent="Panel/Instruct"]
+offset_left = 313.333
+offset_top = -215.556
+offset_right = 363.333
+offset_bottom = -175.556
+text = "Tutup"
 
 [connection signal="pressed" from="Panel/Music/MusicButton" to="." method="_on_music_button_pressed"]
 [connection signal="pressed" from="Panel/SFX/SFXButton" to="." method="_on_sfx_button_pressed"]
 [connection signal="pressed" from="Panel/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="Panel/VBoxContainer/Controls" to="." method="_on_controls_pressed"]
 [connection signal="pressed" from="Panel/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Panel/Instruct/Close" to="." method="_on_close_pressed"]

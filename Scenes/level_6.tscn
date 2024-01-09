@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=3 uid="uid://chacklio8fih2"]
+[gd_scene load_steps=61 format=3 uid="uid://chacklio8fih2"]
 
 [ext_resource type="Texture2D" uid="uid://cumc8ingxc10v" path="res://Assets/World/Level 6/Glacial-mountains-parallax-background_vnitti_v3/Glacial-mountains-parallax-background_vnitti/Layers/sky_lightened.png" id="1_06s1f"]
 [ext_resource type="Script" path="res://Scenes/level_6.gd" id="1_ugv72"]
@@ -22,6 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://cvbwpci6kmy11" path="res://Scenes/actionable.tscn" id="19_840j5"]
 [ext_resource type="PackedScene" uid="uid://bfr63y4o401l4" path="res://Scenes/quiz.tscn" id="19_wmpjp"]
 [ext_resource type="Resource" uid="uid://c1310v64dygy5" path="res://Dialog/Level6.dialogue" id="20_bd5n4"]
+[ext_resource type="Texture2D" uid="uid://dv1yc22nwcgq5" path="res://Assets/UI/Emotes6.png" id="21_aywo3"]
 [ext_resource type="Texture2D" uid="uid://bddl073pvr2gq" path="res://Assets/Characters/NPC/TimeFantasyAnimals2/TimeFantasyAnimals2/1x/penguin.png" id="21_gioap"]
 [ext_resource type="Texture2D" uid="uid://dex888gica6q0" path="res://Assets/Characters/NPC/TimeFantasyAnimals2/TimeFantasyAnimals2/1x/walrus.png" id="22_qj28l"]
 [ext_resource type="Texture2D" uid="uid://fcwcc2uxxtiq" path="res://Assets/Characters/NPC/TimeFantasyAnimals2/TimeFantasyAnimals2/1x/mammoth.png" id="23_74mge"]
@@ -3373,6 +3374,15 @@ dialogue_start = "sabretooth"
 [node name="ActionCollision2" type="CollisionShape2D" parent="Animals/Sabretooth/Actionable"]
 shape = SubResource("RectangleShape2D_1m2fa")
 
+[node name="TextureRect" type="TextureRect" parent="Animals/Sabretooth"]
+offset_left = -8.0
+offset_top = -34.0
+offset_right = 9.0
+offset_bottom = -17.0
+texture = ExtResource("21_aywo3")
+expand_mode = 1
+stretch_mode = 5
+
 [node name="Penguin" type="CharacterBody2D" parent="Animals"]
 position = Vector2(924, 264)
 
@@ -3400,6 +3410,15 @@ dialogue_start = "penguin"
 
 [node name="ActionCollision2" type="CollisionShape2D" parent="Animals/Penguin/Actionable"]
 shape = SubResource("RectangleShape2D_1m2fa")
+
+[node name="TextureRect" type="TextureRect" parent="Animals/Penguin"]
+offset_left = -8.0
+offset_top = -34.0
+offset_right = 9.0
+offset_bottom = -17.0
+texture = ExtResource("21_aywo3")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="Walrus" type="CharacterBody2D" parent="Animals"]
 position = Vector2(510, 134)
@@ -3430,6 +3449,15 @@ dialogue_start = "walrus"
 [node name="ActionCollision2" type="CollisionShape2D" parent="Animals/Walrus/Actionable"]
 shape = SubResource("RectangleShape2D_hiplw")
 
+[node name="TextureRect" type="TextureRect" parent="Animals/Walrus"]
+offset_left = -8.0
+offset_top = -34.0
+offset_right = 9.0
+offset_bottom = -17.0
+texture = ExtResource("21_aywo3")
+expand_mode = 1
+stretch_mode = 5
+
 [node name="Mammoth" type="CharacterBody2D" parent="Animals"]
 position = Vector2(91, 454)
 
@@ -3459,6 +3487,15 @@ dialogue_start = "mammoth"
 
 [node name="ActionCollision2" type="CollisionShape2D" parent="Animals/Mammoth/Actionable"]
 shape = SubResource("RectangleShape2D_hiplw")
+
+[node name="TextureRect" type="TextureRect" parent="Animals/Mammoth"]
+offset_left = -8.0
+offset_top = -34.0
+offset_right = 9.0
+offset_bottom = -17.0
+texture = ExtResource("21_aywo3")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="Quiz" parent="." instance=ExtResource("19_wmpjp")]
 position = Vector2(499, 616)
@@ -3498,19 +3535,27 @@ offset_bottom = 238.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Instruct"]
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Instruct/Panel"]
 layout_mode = 0
-offset_left = -376.0
-offset_top = -209.0
-offset_right = 363.0
-offset_bottom = 224.0
+offset_left = 20.0
+offset_top = 62.0
+offset_right = 759.0
+offset_bottom = 450.0
 theme_override_font_sizes/normal_font_size = 30
 bbcode_enabled = true
-text = "Sekarang, kedua-dua [img]res://Assets/Characters/Enemy/free_crusher_enemy/free_crusher_enemy/style_A/PNG/idle/enemycrusher.png[/img] dan [img]res://Assets/Characters/Enemy/bow/bow/bow pull/enemybow.png[/img] berada dalam peringkat ini. Berhati hati!
+text = "[center]Sekarang, kedua-dua [img]res://Assets/Characters/Enemy/free_crusher_enemy/free_crusher_enemy/style_A/PNG/idle/enemycrusher.png[/img] dan [img]res://Assets/Characters/Enemy/bow/bow/bow pull/enemybow.png[/img] berada dalam peringkat ini. Berhati hati!
 
 Elakkan perangkap, kumpulkan syiling, dapatkan pengetahuan dari haiwan dan jawab [rainbow freq=0.5 sat=0.5 val=0.8]Kuiz Bintang[/rainbow]!!
 
-Selamat bermain!"
+Selamat bermain![/center]"
+
+[node name="CloseButton" type="Button" parent="CanvasLayer/Instruct/Panel"]
+layout_mode = 0
+offset_left = 713.0
+offset_top = 11.0
+offset_right = 763.0
+offset_bottom = 51.0
+text = "Tutup"
 
 [node name="PauseButton" type="Button" parent="CanvasLayer"]
 custom_minimum_size = Vector2(50, 50)
@@ -3521,4 +3566,15 @@ offset_bottom = 56.0
 theme = ExtResource("27_veloi")
 text = "Pause"
 
+[node name="RestartButton" type="Button" parent="CanvasLayer"]
+custom_minimum_size = Vector2(50, 50)
+offset_left = 1030.0
+offset_top = 6.0
+offset_right = 1080.0
+offset_bottom = 56.0
+theme = ExtResource("27_veloi")
+text = "Restart"
+
+[connection signal="pressed" from="CanvasLayer/Instruct/Panel/CloseButton" to="CanvasLayer/Instruct" method="_on_close_button_pressed" flags=18]
 [connection signal="pressed" from="CanvasLayer/PauseButton" to="." method="_on_pause_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/RestartButton" to="." method="_on_restart_button_pressed"]

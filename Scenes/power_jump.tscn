@@ -1,6 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://dutpf1a7fmw8h"]
+[gd_scene load_steps=10 format=3 uid="uid://dutpf1a7fmw8h"]
 
+[ext_resource type="Script" path="res://Scenes/powerup.gd" id="1_qnrtb"]
 [ext_resource type="Texture2D" uid="uid://b3ikpxfvphd3d" path="res://Assets/Misc/Coin_Gems/spr_coin_roj.png" id="2_yk2dj"]
+[ext_resource type="AudioStream" uid="uid://djxx8voi2w7u" path="res://Assets/Audio/SFX/COLORALPHA 50 Menu Interface SFX/COLORALPHA 50 Menu Interface SFX/WAV/MI_SFX 08.wav" id="3_ewmpa"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vxgc0"]
 atlas = ExtResource("2_yk2dj")
@@ -42,6 +44,7 @@ animations = [{
 size = Vector2(10, 15)
 
 [node name="powerJump" type="Area2D" groups=["powerJump"]]
+script = ExtResource("1_qnrtb")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_j4rbp")
@@ -52,3 +55,11 @@ frame_progress = 0.367355
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_fhlnj")
+
+[node name="SFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_ewmpa")
+bus = &"SFX"
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

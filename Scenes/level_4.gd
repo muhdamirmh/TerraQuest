@@ -11,5 +11,12 @@ func _ready():
 func _on_pause_button_pressed():
 	$CanvasLayer/PauseButton.hide()
 	pauseMenu()
+	MusicController.playsfxbutton()
+	
+func _on_restart_button_pressed():
+	MusicController.playsfxbutton()
+	get_tree().reload_current_scene()
+
+
 
 

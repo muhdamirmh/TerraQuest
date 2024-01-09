@@ -44,7 +44,6 @@ func ready2():
 	MusicController.playlevel(num)
 	GlobalParallaxBackground.hide()
 	Global.isplaying[n] = true
-	print(n)
 	
 func pauseMenu():
 	if paused:
@@ -52,7 +51,7 @@ func pauseMenu():
 		Engine.time_scale = 1
 	else:
 		pause_menu.show()
-		Engine.time_scale = 0
+		Engine.time_scale = 0.0001
 	
 	paused = !paused
 	

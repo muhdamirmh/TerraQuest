@@ -1,10 +1,9 @@
-extends Node2D
+extends Area2D
 
-class_name Coins
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$AnimatedSprite2D.play()
+	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -18,3 +17,4 @@ func _on_area_entered(area):
 		$SFX.play()
 		await $Timer.timeout
 		queue_free()
+		

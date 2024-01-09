@@ -1,4 +1,4 @@
-[gd_scene load_steps=61 format=3 uid="uid://dp8bdty5i7js6"]
+[gd_scene load_steps=62 format=3 uid="uid://dp8bdty5i7js6"]
 
 [ext_resource type="Texture2D" uid="uid://dq21e2tomsien" path="res://Assets/World/Level 4/[Free]Fantasy_Swamp_Forest/Fantasy Swamp Forest/Free/BG_3/BG_3.png" id="1_24qlc"]
 [ext_resource type="Script" path="res://Scenes/level_4.gd" id="1_qpcx4"]
@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://bfr63y4o401l4" path="res://Scenes/quiz.tscn" id="16_i5rg8"]
 [ext_resource type="PackedScene" uid="uid://cvbwpci6kmy11" path="res://Scenes/actionable.tscn" id="17_ltb36"]
 [ext_resource type="Resource" uid="uid://chi152d60wv20" path="res://Dialog/Level4.dialogue" id="18_08i3u"]
+[ext_resource type="Texture2D" uid="uid://dv1yc22nwcgq5" path="res://Assets/UI/Emotes6.png" id="18_u24ds"]
 [ext_resource type="Texture2D" uid="uid://5uwvtblcs5x7" path="res://Assets/Characters/NPC/Animal Basic Asset Pack/Honking Goose/HonkingGooseIdleSide.png" id="19_kxlvx"]
 [ext_resource type="Texture2D" uid="uid://kwrc2wm24e8l" path="res://Assets/Characters/NPC/otter_sprite_pack/otter_idle_1.png" id="19_yvr5x"]
 [ext_resource type="Texture2D" uid="uid://c5qgmbjt3c4uu" path="res://Assets/Characters/NPC/otter_sprite_pack/otter_idle_2.png" id="20_814q0"]
@@ -3225,6 +3226,15 @@ dialogue_start = "frog"
 [node name="ActionCollision2" type="CollisionShape2D" parent="Animals/Frog/Actionable"]
 shape = SubResource("RectangleShape2D_1m2fa")
 
+[node name="TextureRect" type="TextureRect" parent="Animals/Frog"]
+offset_left = -8.0
+offset_top = -34.0
+offset_right = 9.0
+offset_bottom = -17.0
+texture = ExtResource("18_u24ds")
+expand_mode = 1
+stretch_mode = 5
+
 [node name="Goose" type="CharacterBody2D" parent="Animals"]
 position = Vector2(277, 552)
 scale = Vector2(1.2, 1.2)
@@ -3255,6 +3265,15 @@ dialogue_start = "goose"
 [node name="ActionCollision2" type="CollisionShape2D" parent="Animals/Goose/Actionable"]
 shape = SubResource("RectangleShape2D_1m2fa")
 
+[node name="TextureRect" type="TextureRect" parent="Animals/Goose"]
+offset_left = -8.0
+offset_top = -34.0
+offset_right = 9.0
+offset_bottom = -17.0
+texture = ExtResource("18_u24ds")
+expand_mode = 1
+stretch_mode = 5
+
 [node name="Otter" type="CharacterBody2D" parent="Animals"]
 position = Vector2(706, 583)
 
@@ -3283,6 +3302,15 @@ dialogue_start = "otter"
 
 [node name="ActionCollision2" type="CollisionShape2D" parent="Animals/Otter/Actionable"]
 shape = SubResource("RectangleShape2D_1m2fa")
+
+[node name="TextureRect" type="TextureRect" parent="Animals/Otter"]
+offset_left = -8.0
+offset_top = -34.0
+offset_right = 9.0
+offset_bottom = -17.0
+texture = ExtResource("18_u24ds")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="Dragonfly" type="CharacterBody2D" parent="Animals"]
 position = Vector2(746, 279)
@@ -3314,6 +3342,15 @@ dialogue_start = "dragonfly"
 
 [node name="ActionCollision2" type="CollisionShape2D" parent="Animals/Dragonfly/Actionable"]
 shape = SubResource("RectangleShape2D_1m2fa")
+
+[node name="TextureRect" type="TextureRect" parent="Animals/Dragonfly"]
+offset_left = -8.0
+offset_top = -34.0
+offset_right = 9.0
+offset_bottom = -17.0
+texture = ExtResource("18_u24ds")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="Quiz" parent="." instance=ExtResource("16_i5rg8")]
 position = Vector2(1098, 39)
@@ -3353,19 +3390,27 @@ offset_bottom = 238.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Instruct"]
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Instruct/Panel"]
 layout_mode = 0
-offset_left = -376.0
-offset_top = -209.0
-offset_right = 363.0
-offset_bottom = 224.0
+offset_left = 20.0
+offset_top = 62.0
+offset_right = 759.0
+offset_bottom = 450.0
 theme_override_font_sizes/normal_font_size = 30
 bbcode_enabled = true
-text = "Berhati-hati dengan [img]res://Assets/Characters/Enemy/bow/bow/bow pull/enemybow.png[/img], ini adalah halangan terbaru yang boleh menembak [img]res://Assets/Characters/Enemy/Effect and Bullet 16x16/enemybullet.png[/img] terhadap anda!
+text = "[center]Berhati-hati dengan [img]res://Assets/Characters/Enemy/bow/bow/bow pull/enemybow.png[/img], ini adalah halangan terbaru yang boleh menembak [img]res://Assets/Characters/Enemy/Effect and Bullet 16x16/enemybullet.png[/img] terhadap anda!
 
 Elakkan perangkap, kumpulkan syiling, dapatkan pengetahuan dari haiwan dan jawab [rainbow freq=0.5 sat=0.5 val=0.8]Kuiz Bintang[/rainbow]!!
 
-Selamat bermain!"
+Selamat bermain![/center]"
+
+[node name="CloseButton" type="Button" parent="CanvasLayer/Instruct/Panel"]
+layout_mode = 0
+offset_left = 713.0
+offset_top = 11.0
+offset_right = 763.0
+offset_bottom = 51.0
+text = "Tutup"
 
 [node name="PauseButton" type="Button" parent="CanvasLayer"]
 custom_minimum_size = Vector2(50, 50)
@@ -3376,5 +3421,16 @@ offset_bottom = 56.0
 theme = ExtResource("27_0umhs")
 text = "Pause"
 
+[node name="RestartButton" type="Button" parent="CanvasLayer"]
+custom_minimum_size = Vector2(50, 50)
+offset_left = 1030.0
+offset_top = 6.0
+offset_right = 1080.0
+offset_bottom = 56.0
+theme = ExtResource("27_0umhs")
+text = "Restart"
+
 [connection signal="body_entered" from="Obstacles/Traps/1" to="Obstacles/Traps/1" method="_on_body_entered" flags=18]
+[connection signal="pressed" from="CanvasLayer/Instruct/Panel/CloseButton" to="CanvasLayer/Instruct" method="_on_close_button_pressed" flags=18]
 [connection signal="pressed" from="CanvasLayer/PauseButton" to="." method="_on_pause_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/RestartButton" to="." method="_on_restart_button_pressed"]

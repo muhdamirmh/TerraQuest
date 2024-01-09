@@ -12,3 +12,8 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	playerposition = Vector2(x,y)
+
+
+func _on_area_entered(area):
+	if area.is_in_group("Player"):
+		$SFX.play()
