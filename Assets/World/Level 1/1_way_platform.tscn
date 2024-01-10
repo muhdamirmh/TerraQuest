@@ -1268,7 +1268,7 @@ sources/0 = SubResource("TileSetAtlasSource_7wva4")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n5rwd"]
 size = Vector2(32, 6)
 
-[node name="1wayPlatform" type="TileMap"]
+[node name="1wayPlatform" type="TileMap" groups=["Texture"]]
 tile_set = SubResource("TileSet_k56u1")
 format = 2
 layer_0/tile_data = PackedInt32Array(65535, 1441792, 65551, 0, 1441792, 65551)

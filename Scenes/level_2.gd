@@ -5,6 +5,13 @@ func _ready():
 	num = 2
 	n = num - 1
 	dialogPath = "res://Dialog/Level2.dialogue"
+	
+	if OS.get_name() == "Windows":
+		var txtfile = "res://Assets/UI/androidlevel2.txt"
+		var file = FileAccess.open(txtfile, FileAccess.READ)
+		var text = file.get_as_text()
+		$CanvasLayer/Instruct/Panel/RichTextLabel.set_text(text)
+		
 	ready2()
 	
 func _on_pause_button_pressed():

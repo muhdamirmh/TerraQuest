@@ -14,6 +14,7 @@ func _ready():
 		$Panel/Music/MusicButton.button_pressed = usersave.musicbutton
 	if usersave.sfxbutton:
 		$Panel/SFX/SFXButton.button_pressed = usersave.sfxbutton
+	
 
 func _on_resume_pressed():
 	level.pauseMenu()

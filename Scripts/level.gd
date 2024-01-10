@@ -39,6 +39,15 @@ func endlvl(num):
 	
 	
 func ready2():
+	if OS.get_name() == "Android":
+		var textpad = get_tree().get_nodes_in_group("Texture")
+		for index in textpad:
+			for n in 99:
+				var atlas = index.get_tileset().get_source(n) as TileSetAtlasSource
+				if atlas == null:
+					pass
+				else:
+					atlas.set_use_texture_padding(false)
 	DialogueManager.show_example_dialogue_balloon(load(dialogPath), keyword)
 	MusicController.stopmainmenu()
 	MusicController.playlevel(num)

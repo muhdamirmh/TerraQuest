@@ -4,6 +4,7 @@ class_name Player
 
 signal coinamount(int)
 signal powerpos(pos)
+signal joystickjump
 
 @export var speed : float = 150.0
 @export var DialogPath = ""
@@ -18,7 +19,6 @@ var coins = 0
 @onready var sfxjump = $SFX/Jump
 @onready var sfxdeath = $SFX/Death
 @onready var sfxsteps = $SFX/Steps
-@onready var joystick = $UIManager/Joystick
 
 var animalsrange = false
 var playeratnpc = false
@@ -34,6 +34,8 @@ var wallparent
 
 var usersave = UserSave
 
+@export var joystick_left : VirtualJoystick
+
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -44,63 +46,63 @@ func _ready():
 	usersave = UserSave.load_or_create()
 	
 func _input(event:InputEvent):
-	if(event.is_action_pressed("Down") && is_on_floor()):
-		position.y += 1
-	if event.is_action_pressed("Respawn"):
-		get_tree().reload_current_scene()
-	if animalsrange == true || quizrange == true:
-		if (event.is_action_pressed("Dialog") || event is InputEventMouseButton and event.double_click == true) && Global.playeratnpc == false:
-			var actionables = actionable_finder.get_overlapping_areas()
-			if actionables.size() > 0:
-				actionables[0].action()
-#		if (event is InputEventScreenTouch) && Global.playeratnpc == false:
-#			var actionables = actionable_finder.get_overlapping_areas()
-#			if actionables.size() > 0:
-#				actionables[0].action()
+	
+	if OS.get_name() == "Windows":
+		if(event.is_action_pressed("Down") && is_on_floor()):
+			position.y += 1
+		if animalsrange == true || quizrange == true:
+			if (event.is_action_pressed("Dialog") || event is InputEventMouseButton and event.double_click == true) && Global.playeratnpc == false:
+				var actionables = actionable_finder.get_overlapping_areas()
+				if actionables.size() > 0:
+					actionables[0].action()
+					
+		if wallrange == true && powerWall == true:
+			if event.is_action_pressed("E"):
+				wallparent.queue_free()
+				powerWall = false
 				
-
-	if wallrange == true && powerWall == true:
-		if event.is_action_pressed("E"):
-			wallparent.queue_free()
-			powerWall = false
+	
 
 
 func _physics_process(delta):
 	
 	Global.connect("addcoins", addcoins)
 	
-	if Global.joystickenab == false:
-		joystick.visible = false
-	else:
-		joystick.visible = true
-	
 	if not is_on_floor():
 		velocity.y += gravity * delta
 
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-	direction = Input.get_vector("Left", "Right", "up", "down")
-	
-	# Control whether to move or not to move
-	
-	if direction.x != 0 && state_machine.check_if_can_move():
-		velocity.x = direction.x * speed
-		if $Timer.time_left <= 0:
-			sfxsteps.pitch_scale = randf_range(0.8, 1.2)
-			sfxsteps.play()
-			$Timer.start(0.4)
+	if OS.get_name() == "Windows":
+		$UIManager/Test/UI.visible = false
+		$UIManager/Test/UI2.visible = false
+		direction = Input.get_vector("Left", "Right", "up", "down")
 		
+		# Control whether to move or not to move
 		
-	else:
-		velocity.x = move_toward(velocity.x, 0, speed)
-		
-	if joystick.get_velo().x != 0 && state_machine.check_if_can_move():
-		direction = joystick.get_velo()
-		velocity.x = direction.x * speed
-		if $Timer.time_left <= 0:
-			sfxsteps.pitch_scale = randf_range(0.8, 1.2)
-			sfxsteps.play()
-			$Timer.start(0.4)
+		if direction.x != 0 && state_machine.check_if_can_move():
+			velocity.x = direction.x * speed
+			if $Timer.time_left <= 0:
+				sfxsteps.pitch_scale = randf_range(0.8, 1.2)
+				sfxsteps.play()
+				$Timer.start(0.4)
+			
+			
+		else:
+			velocity.x = move_toward(velocity.x, 0, speed)
+
+	if OS.get_name() == "Android":
+		$UIManager/Test/UI.visible = true
+		$UIManager/Test/UI2.visible = true
+		direction = joystick_left.output
+		if joystick_left and joystick_left.is_pressed and state_machine.check_if_can_move():
+			velocity.x =  joystick_left.output.x * speed
+			if direction.y >= 0.9:
+				position.y += 1
+			if $Timer.time_left <= 0:
+				sfxsteps.pitch_scale = randf_range(0.8, 1.2)
+				sfxsteps.play()
+				$Timer.start(0.4)
+		else:
+			velocity.x = move_toward(velocity.x, 0, speed)
 	
 	
 
@@ -111,13 +113,13 @@ func _physics_process(delta):
 func update_animation_parameters():
 	animation_tree.set("parameters/move/blend_position", direction.x)
 
+
 func update_facing_direction():
 	if direction.x > 0:
 		sprite.flip_h = false
 	elif direction.x < 0:
 		sprite.flip_h = true
-		
-	
+
 
 
 func _on_hitbox_area_entered(area):
@@ -202,3 +204,19 @@ func addcoins(coin):
 		if usersave:
 			usersave.donecoin = Global.donecoin
 			usersave.save()
+
+
+func _on_jump_pressed():
+	emit_signal("joystickjump")
+
+
+func _on_interact_pressed():
+	if animalsrange == true || quizrange == true:
+		if Global.playeratnpc == false:
+			var actionables = actionable_finder.get_overlapping_areas()
+			if actionables.size() > 0:
+				actionables[0].action()
+				
+	if wallrange == true && powerWall == true:
+		wallparent.queue_free()
+		powerWall = false

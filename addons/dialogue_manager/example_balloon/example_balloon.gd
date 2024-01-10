@@ -106,21 +106,33 @@ func _on_mutated(_mutation: Dictionary) -> void:
 
 func _on_balloon_gui_input(event: InputEvent) -> void:
 	# If the user clicks on the balloon while it's typing then skip typing
-	if dialogue_label.is_typing and ((event is InputEventMouseButton and event.is_double_click()) or  event.is_action_pressed("Dialog")):
-		get_viewport().set_input_as_handled()
-		dialogue_label.skip_typing()
-		return
-
+	if OS.get_name() == "Windows":
+		if dialogue_label.is_typing and ((event is InputEventMouseButton and event.is_double_click()) or  event.is_action_pressed("Dialog")):
+			get_viewport().set_input_as_handled()
+			dialogue_label.skip_typing()
+			return
+			
+		if (event is InputEventMouseButton and event.is_double_click()) or (event.is_action_pressed("Dialog") and get_viewport().gui_get_focus_owner() == balloon):
+			next(dialogue_line.next_id)
+			
+	elif OS.get_name() == "Android":
+		if dialogue_label.is_typing and (event is InputEventScreenTouch and event.is_pressed()):
+			get_viewport().set_input_as_handled()
+			dialogue_label.skip_typing()
+			return
+		if (event is InputEventScreenTouch and event.is_pressed()) and get_viewport().gui_get_focus_owner() == balloon:
+			next(dialogue_line.next_id)
+			
 	if not is_waiting_for_input: return
 	if dialogue_line.responses.size() > 0: return
 
 	# When there are no response options the balloon itself is the clickable thing
 	get_viewport().set_input_as_handled()
 
-	if event is InputEventMouseButton and event.is_double_click():
-		next(dialogue_line.next_id)
-	elif event.is_action_pressed("Dialog") and get_viewport().gui_get_focus_owner() == balloon:
-		next(dialogue_line.next_id)
+#	if (event is InputEventMouseButton and event.is_double_click()) or event is InputEventScreenTouch:
+#		next(dialogue_line.next_id)
+#	elif event.is_action_pressed("Dialog") and get_viewport().gui_get_focus_owner() == balloon:
+#		next(dialogue_line.next_id)
 
 
 func _on_responses_menu_response_selected(response: DialogueResponse) -> void:

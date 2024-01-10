@@ -11,6 +11,8 @@ class_name AirState
 func state_process(delta):
 	if(character.is_on_floor()):
 		next_state = ground_state
+	player.connect("joystickjump", joystickdoublejump)
+	
 		
 func state_input(event : InputEvent):
 	if(event.is_action_pressed("Jump") && player.max_jump == 2):
@@ -19,6 +21,7 @@ func state_input(event : InputEvent):
 func on_exit():
 	if(next_state == ground_state):
 		playback.travel("land")
+		
 
 func on_enter():
 	can_move = true
@@ -29,8 +32,8 @@ func double_jump():
 	player.max_jump = 1
 	player.sfxjump.play()
 
-
-
-func _on_joystick_jump_now():
+func joystickdoublejump():
 	if player.max_jump == 2:
 		double_jump()
+
+

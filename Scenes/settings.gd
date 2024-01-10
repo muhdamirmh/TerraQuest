@@ -55,5 +55,5 @@ func _on_back_pressed():
 
 
 func _on_control_pressed():
-	$Panel/Control/Instruct.show()
+	$Panel/Instruct.show()
 	MusicController.playsfxbutton()

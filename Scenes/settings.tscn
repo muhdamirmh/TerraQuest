@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bjhc7l56ei2re" path="res://Assets/UI/Mute Button unmuted1.png" id="2_2lt4a"]
 [ext_resource type="Theme" uid="uid://ir4rfq0nqkt0" path="res://Assets/UI/UITheme.tres" id="2_83ckh"]
 [ext_resource type="Texture2D" uid="uid://0v86nmf3cg1f" path="res://Assets/UI/Mute Button muted1.png" id="3_7kqo8"]
-[ext_resource type="Script" path="res://Scenes/instruct.gd" id="5_xp1yt"]
+[ext_resource type="PackedScene" uid="uid://chu0dwdl7kso5" path="res://Scenes/instruct.tscn" id="5_gfv15"]
 
 [node name="Settings" type="Control"]
 layout_mode = 3
@@ -17,7 +17,7 @@ layout_mode = 0
 offset_left = 350.0
 offset_top = 201.0
 offset_right = 814.0
-offset_bottom = 376.0
+offset_bottom = 358.0
 theme = ExtResource("2_83ckh")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
@@ -27,10 +27,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -221.0
-offset_top = -86.5
-offset_right = -75.0
-offset_bottom = 87.5
+offset_left = -220.0
+offset_top = -67.5
+offset_right = -74.0
+offset_bottom = 52.5
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -93,66 +93,9 @@ offset_bottom = 91.0
 theme_override_font_sizes/font_size = 30
 text = "Kawalan"
 
-[node name="Instruct" type="Control" parent="Panel/Control"]
+[node name="Instruct" parent="Panel" instance=ExtResource("5_gfv15")]
 visible = false
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -53.0
-offset_top = 41.0
-offset_right = -53.0
-offset_bottom = 41.0
-grow_horizontal = 2
-grow_vertical = 2
-theme = ExtResource("2_83ckh")
-script = ExtResource("5_xp1yt")
-
-[node name="Panel" type="Panel" parent="Panel/Control/Instruct"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -396.0
-offset_top = -226.0
-offset_right = 383.0
-offset_bottom = 238.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Panel/Control/Instruct/Panel"]
-layout_mode = 0
-offset_left = 20.0
-offset_top = 62.0
-offset_right = 759.0
-offset_bottom = 450.0
-theme_override_font_sizes/normal_font_size = 30
-bbcode_enabled = true
-text = "[center][img]res://Assets/UI/Keyboards/image_1-3.png[/img] atau 2 kali [img]res://Assets/UI/MOUSEBUTTONLEFT.png[/img]: Mula atau sambung dialog dengan haiwan/kuiz
-
-[img]res://Assets/UI/Keyboards/image_91.png[/img]: Kiri
-
-[img]res://Assets/UI/Keyboards/image_88.png[/img]: Kanan
-
-Apabila anda berada di atas kayu seperti ini [img]res://Assets/World/Level 1/1wayplatform.png[/img], tekan [img]res://Assets/UI/Keyboards/image_73.png[/img] untuk kebawah
-
-[img]res://Assets/UI/Keyboards/image_2-2.png[/img]: Lompat
-
-[img]res://Assets/UI/Keyboards/image_87.png[/img]: Berinteraksi dengan objek
-
-[img]res://Assets/UI/Keyboards/image_74.png[/img]: Mula semula peringkat anda[/center]"
-
-[node name="CloseButton" type="Button" parent="Panel/Control/Instruct/Panel"]
-layout_mode = 0
-offset_left = 713.0
-offset_top = 11.0
-offset_right = 763.0
-offset_bottom = 51.0
-text = "Tutup"
 
 [node name="Back" type="Button" parent="."]
 layout_mode = 0
@@ -166,5 +109,4 @@ text = "Kembali"
 [connection signal="pressed" from="Panel/VBoxContainer/Music/MusicButton" to="." method="_on_music_button_pressed"]
 [connection signal="pressed" from="Panel/VBoxContainer/SFX/SFXButton" to="." method="_on_sfx_button_pressed"]
 [connection signal="pressed" from="Panel/Control" to="." method="_on_control_pressed"]
-[connection signal="pressed" from="Panel/Control/Instruct/Panel/CloseButton" to="Panel/Control/Instruct" method="_on_close_button_pressed" flags=18]
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]

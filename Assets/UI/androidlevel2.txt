@@ -1,0 +1,5 @@
+[center]Jika anda dapat [img]res://Assets/Misc/Coin_Gems/yellowgems.png[/img], anda boleh menekan [img]res://Assets/UI/Interact.png[/img] terhadap halangan dinding berwarna [color=yellow]kuning[/color] untuk memecahkannya!
+
+Elakkan perangkap, kumpulkan syiling, dapatkan pengetahuan dari haiwan dan jawab [rainbow freq=0.5 sat=0.5 val=0.8]Kuiz Bintang[/rainbow]!!
+
+Selamat bermain![/center]

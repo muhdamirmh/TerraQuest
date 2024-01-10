@@ -1,0 +1,17 @@
+[center][img]res://Assets/UI/Interact.png[/img]: Mula atau sambung dialog dengan haiwan/kuiz dan berinteraksi dengan objek
+
+[img]res://Assets/UI/Jump.png[/img]: Lompat
+
+Apabila anda berada di atas kayu seperti ini [img]res://Assets/World/Level 1/1wayplatform.png[/img], tarik  [img]res://Assets/UI/joystick.png[/img] kebawah untuk turun dari kayu
+
+Anda akan kehilangan satu hati di sudut kiri atas jika mengenai perangkap dan musuh.
+
+Bendera mewakili cekpoin, cekpoin ini menghidupkan kembali pemain setiap kali pemain mengenai perangkap.
+
+Jika ketiga-tiga hati sudah tiada, peringkat akan berakhir
+
+Jika anda dapat [img]res://Assets/Misc/Coin_Gems/redgems.png[/img], anda boleh menekan [img]res://Assets/UI/Jump.png[/img] untuk melompat sekali lagi ketika di udara!
+
+Elakkan perangkap, kumpulkan syiling, dapatkan pengetahuan dari haiwan dan jawab [rainbow freq=0.5 sat=0.5 val=0.8]Kuiz Bintang[/rainbow]!!
+
+Selamat bermain![/center]

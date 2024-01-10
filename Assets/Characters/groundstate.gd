@@ -17,9 +17,10 @@ func state_process(delta):
 		can_move = false
 	elif character.is_on_floor() && Global.instructrange == false:
 		can_move = true
+	player.connect("joystickjump", joystickjump)
 
 func state_input(event : InputEvent):
-	if(event.is_action_pressed("Jump") && can_move == true):
+	if event.is_action_pressed("Jump") and can_move == true:
 		jump()
 		
 func jump():
@@ -27,9 +28,9 @@ func jump():
 	next_state = air_state
 	playback.travel(jump_animation)
 	player.sfxjump.play()
-
-
-func _on_joystick_jump_now():
-	if player.max_jump == 1:
+	
+func joystickjump():
+	if character.is_on_floor() and can_move == true:
 		jump()
-		player.max_jump = 0
+
+

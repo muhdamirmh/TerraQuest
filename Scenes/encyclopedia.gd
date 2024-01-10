@@ -35,7 +35,7 @@ func settext(value: String):
 	$MainPanel/RichTextLabel.clear()
 	for i in example_dict.size():
 		if example_dict[i][0] == value:
-			$MainPanel/RichTextLabel.append_text(example_dict[i][1])
+			$MainPanel/RichTextLabel.set_text(example_dict[i][1])
 
 func _on_lvl_1_1_pressed():
 	MusicController.playsfxbutton()
