@@ -1,4 +1,4 @@
-[gd_scene load_steps=92 format=3 uid="uid://42wa7n0pse7t"]
+[gd_scene load_steps=84 format=3 uid="uid://42wa7n0pse7t"]
 
 [ext_resource type="Script" path="res://Scenes/level_1.gd" id="1_o3741"]
 [ext_resource type="PackedScene" uid="uid://bnjj4rdfcgq45" path="res://Scenes/pause_menu.tscn" id="2_xhhy3"]
@@ -12,7 +12,6 @@
 [ext_resource type="PackedScene" uid="uid://dutpf1a7fmw8h" path="res://Scenes/power_jump.tscn" id="8_1nbwf"]
 [ext_resource type="Texture2D" uid="uid://6y0rxu46u3r2" path="res://Assets/Characters/NPC/MiniDeer1.png" id="9_r0oat"]
 [ext_resource type="Script" path="res://Scenes/actionable.gd" id="10_e1msb"]
-[ext_resource type="Script" path="res://Scenes/power_jump.gd" id="10_sprye"]
 [ext_resource type="PackedScene" uid="uid://ccvn6jdmdku5x" path="res://Assets/World/coin.tscn" id="11_d8ael"]
 [ext_resource type="Resource" uid="uid://cckjuw3fl5ytm" path="res://Dialog/Level1.dialogue" id="14_13kw4"]
 [ext_resource type="Texture2D" uid="uid://dv1yc22nwcgq5" path="res://Assets/UI/Emotes6.png" id="14_pp3yu"]
@@ -22,7 +21,6 @@
 [ext_resource type="Texture2D" uid="uid://dewbfw1ujb51y" path="res://Assets/Characters/NPC/MiniWolf.png" id="17_t2j7w"]
 [ext_resource type="Texture2D" uid="uid://cfrugeft3umsg" path="res://Assets/Characters/NPC/MiniBear.png" id="18_k6u5r"]
 [ext_resource type="PackedScene" uid="uid://bsg1vlgd7y3ds" path="res://Scenes/item.tscn" id="20_153sm"]
-[ext_resource type="Texture2D" uid="uid://b3ikpxfvphd3d" path="res://Assets/Misc/Coin_Gems/spr_coin_roj.png" id="21_matay"]
 [ext_resource type="Texture2D" uid="uid://c26as34iqkjsh" path="res://Assets/Misc/Arrows_pack.png" id="24_0v2pe"]
 [ext_resource type="PackedScene" uid="uid://chu0dwdl7kso5" path="res://Scenes/instruct.tscn" id="25_80brm"]
 [ext_resource type="PackedScene" uid="uid://nlab2fak51tp" path="res://Scenes/checkpoint.tscn" id="26_68lc7"]
@@ -4372,45 +4370,6 @@ animations = [{
 "speed": 8.0
 }]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_vxgc0"]
-atlas = ExtResource("21_matay")
-region = Rect2(0, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_n3iyq"]
-atlas = ExtResource("21_matay")
-region = Rect2(16, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_k3vsa"]
-atlas = ExtResource("21_matay")
-region = Rect2(32, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_me0jn"]
-atlas = ExtResource("21_matay")
-region = Rect2(48, 0, 16, 16)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_j4rbp"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_vxgc0")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_n3iyq")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_k3vsa")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_me0jn")
-}],
-"loop": true,
-"name": &"jump_power",
-"speed": 10.0
-}]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_fhlnj"]
-size = Vector2(10, 15)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_u8pjy"]
 atlas = ExtResource("24_0v2pe")
 region = Rect2(0, 2048, 1024, 1024)
@@ -4867,29 +4826,14 @@ position = Vector2(1115, 446)
 
 [node name="Powerups" type="Node2D" parent="Items"]
 
-[node name="powerJump2" type="Area2D" parent="Items/Powerups" groups=["powerJump"]]
-position = Vector2(47, 415)
-script = ExtResource("10_sprye")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Items/Powerups/powerJump2"]
-sprite_frames = SubResource("SpriteFrames_j4rbp")
-animation = &"jump_power"
-frame = 2
-frame_progress = 0.00639582
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Items/Powerups/powerJump2"]
-position = Vector2(0, 0.5)
-rotation = -3.14159
-shape = SubResource("RectangleShape2D_fhlnj")
-
-[node name="WaitTime" type="Timer" parent="Items/Powerups/powerJump2"]
-one_shot = true
-
 [node name="powerJump" parent="Items/Powerups" instance=ExtResource("8_1nbwf")]
 position = Vector2(192, 533)
 
 [node name="powerJump4" parent="Items/Powerups" instance=ExtResource("8_1nbwf")]
 position = Vector2(731, 589)
+
+[node name="powerJump10" parent="Items/Powerups" instance=ExtResource("8_1nbwf")]
+position = Vector2(49, 416)
 
 [node name="powerJump7" parent="Items/Powerups" instance=ExtResource("8_1nbwf")]
 position = Vector2(840, 494)
@@ -5002,7 +4946,5 @@ text = "Restart"
 [connection signal="child_entered_tree" from="Animals/Wolf" to="Animals/Wolf" method="_on_child_entered_tree" flags=18]
 [connection signal="child_entered_tree" from="Animals/Bear" to="Animals/Bear" method="_on_child_entered_tree" flags=18]
 [connection signal="child_entered_tree" from="Animals/Deer" to="Animals/Deer" method="_on_child_entered_tree" flags=18]
-[connection signal="body_entered" from="Items/Powerups/powerJump2" to="Items/Powerups/powerJump2" method="_on_body_entered" flags=18]
-[connection signal="timeout" from="Items/Powerups/powerJump2/WaitTime" to="Items/Powerups/powerJump2" method="_on_timer_timeout" flags=18]
 [connection signal="pressed" from="CanvasLayer/PauseButton" to="." method="_on_pause_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/RestartButton" to="." method="_on_restart_button_pressed"]

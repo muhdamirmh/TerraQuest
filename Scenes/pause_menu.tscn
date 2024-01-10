@@ -166,6 +166,7 @@ Apabila anda berada di atas kayu seperti ini [img]res://Assets/World/Level 1/1wa
 [img]res://Assets/UI/Keyboards/image_74.png[/img]: Mula semula peringkat anda[/center]"
 
 [node name="Close" type="Button" parent="Panel/Instruct"]
+layout_mode = 0
 offset_left = 313.333
 offset_top = -215.556
 offset_right = 363.333
