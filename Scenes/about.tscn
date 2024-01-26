@@ -23,23 +23,25 @@ anchor_bottom = 0.5
 offset_left = -396.0
 offset_top = -226.0
 offset_right = 383.0
-offset_bottom = 95.0
+offset_bottom = 165.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel"]
 layout_mode = 0
-offset_left = 200.0
-offset_top = 111.0
-offset_right = 939.0
-offset_bottom = 544.0
+offset_left = 20.0
+offset_top = 17.0
+offset_right = 759.0
+offset_bottom = 450.0
 theme_override_font_sizes/normal_font_size = 30
 bbcode_enabled = true
 text = "[center]© 2024 Muhammad Amir
 
-Permainan video ini tidak akan tercipta tanpa bantuan daripada pelbagai pihak yang mahu melihat permainan ini menjadi kenyataan
+Permainan ini ialah sebuah permainan yang dapat mengajar kanak-kanak tentang alam dan haiwan.
 
-Terima kasih, semua!
+Semua ilmu yang terdapat dalam permainan ini berasaskan tajuk Unit 4 dan Unit 5 daripada buku teks Sains Tahun 6
+
+Semoga anda dapat memanfaatkan permainan ini dan belajar suatu perkara yang baharu daripadanya!
 
 [img]res://Assets/UI/emoji.png[/img][/center]
 
