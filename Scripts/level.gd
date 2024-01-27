@@ -17,8 +17,6 @@ func _ready():
 	pass
 	
 func _input(event):
-#	if Input.is_action_just_pressed("Escape"):
-#		pauseMenu()
 	pass
 
 
@@ -39,15 +37,17 @@ func endlvl(num):
 	
 	
 func ready2():
-	if OS.get_name() == "Android":
-		var textpad = get_tree().get_nodes_in_group("Texture")
-		for index in textpad:
-			for n in 99:
-				var atlas = index.get_tileset().get_source(n) as TileSetAtlasSource
-				if atlas == null:
-					pass
-				else:
+	var textpad = get_tree().get_nodes_in_group("Texture")
+	for index in textpad:
+		for n in 99:
+			var atlas = index.get_tileset().get_source(n) as TileSetAtlasSource
+			if atlas == null:
+				pass
+			else:
+				if OS.get_name() == "Android":
 					atlas.set_use_texture_padding(false)
+				elif OS.get_name() == "Windows":
+					atlas.set_use_texture_padding(true)
 	DialogueManager.show_example_dialogue_balloon(load(dialogPath), keyword)
 	MusicController.stopmainmenu()
 	MusicController.playlevel(num)
